@@ -5,7 +5,7 @@ import os
 # 1. Configuration
 API_TOKEN = os.environ.get("CR_API_TOKEN") 
 PLAYER_TAG = "#C92LJPYG"
-BASE_URL = "https://api.clashroyale.com/v1"
+BASE_URL = "https://proxy.royaleapi.dev/v1"
 MASTER_FILE = "battlelog_master.json"
 
 def fetch_and_update():
