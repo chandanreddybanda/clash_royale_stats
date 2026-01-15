@@ -3,49 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clash Royale Battle Stats</title>
+    <title>Clash Royale Pro Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Verdana', sans-serif; background-color: #1a1a1a; color: #f0f0f0; margin: 0; padding: 20px; }
-        .container { max-width: 1000px; margin: 0 auto; }
-        h1 { text-align: center; color: #ffcc00; }
-        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px; }
-        .card { background: #2a2a2a; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
-        .match-list { list-style: none; padding: 0; }
-        .match-item { background: #333; padding: 10px; margin-bottom: 5px; display: flex; justify-content: space-between; border-radius: 5px; }
-        .win { border-left: 5px solid #4caf50; }
-        .loss { border-left: 5px solid #f44336; }
-        .chart-container { position: relative; height: 300px; }
+        :root {
+            --bg-color: #0f1014;
+            --card-bg: #1b1d24;
+            --text-main: #ffffff;
+            --text-muted: #8a8d96;
+            --accent-win: #00d26a;
+            --accent-loss: #f94144;
+            --accent-draw: #577590;
+            --accent-gold: #ffc107;
+            --border-color: #2d3039;
+        }
+
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); margin: 0; padding: 20px; }
+        .container { max-width: 1400px; margin: 0 auto; }
+
+        /* HEADER */
+        header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+        h1 { font-weight: 800; font-size: 2rem; margin: 0; background: linear-gradient(90deg, #fff, #888); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .refresh-btn { background: #333; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: 600; }
+
+        /* BENTO GRID LAYOUT */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto auto;
+            gap: 20px;
+        }
+
+        /* CARD STYLES */
+        .card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 20px; position: relative; overflow: hidden; }
+        .card h3 { margin-top: 0; color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; }
         
-        @media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr; } }
+        /* SPECIFIC CARD SIZES */
+        .col-span-1 { grid-column: span 1; }
+        .col-span-2 { grid-column: span 2; }
+        .col-span-4 { grid-column: span 4; }
+        .row-span-2 { grid-row: span 2; }
+
+        /* KPI NUMBERS */
+        .kpi-number { font-size: 2.5rem; font-weight: 800; display: block; }
+        .kpi-sub { font-size: 0.9rem; color: var(--text-muted); }
+
+        /* FORM BAR (UPDATED) */
+        .form-bar { display: flex; gap: 4px; height: 30px; align-items: center; }
+        .form-segment { flex: 1; height: 100%; border-radius: 4px; transition: transform 0.2s; position: relative; }
+        .form-segment:hover { transform: scaleY(1.2); z-index: 10; }
+        
+        /* MATCH HISTORY LIST */
+        .match-list { display: flex; flex-direction: column; gap: 10px; max-height: 400px; overflow-y: auto; padding-right: 5px; }
+        .match-item { background: #252830; padding: 12px; border-radius: 8px; display: flex; align-items: center; justify-content: space-between; border-left: 4px solid transparent; }
+        .match-item.win { border-left-color: var(--accent-win); }
+        .match-item.loss { border-left-color: var(--accent-loss); }
+        .opp-deck { display: flex; gap: -5px; }
+        .opp-deck img { width: 25px; height: 30px; object-fit: contain; margin-left: -10px; border-radius: 2px; border: 1px solid #000; }
+        
+        /* NEMESIS GRID */
+        .nemesis-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: 10px; }
+        .nemesis-card { background: #252830; border-radius: 8px; padding: 10px; text-align: center; border: 1px solid var(--border-color); }
+        .nemesis-card img { width: 100%; height: auto; filter: drop-shadow(0 4px 4px rgba(0,0,0,0.5)); }
+        .nemesis-count { color: var(--accent-loss); font-weight: bold; font-size: 0.9rem; display: block; margin-top: 5px; }
+
+        /* SCROLLBAR */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+
+        @media (max-width: 1000px) { .bento-grid { grid-template-columns: 1fr; } .col-span-1, .col-span-2, .col-span-4 { grid-column: span 1; } }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>⚔️ Battle Log Dashboard</h1>
-        
-        <div class="stats-grid">
-            <div class="card">
-                <h3 style="text-align:center">Win Rate (Ladder)</h3>
-                <div class="chart-container">
+        <header>
+            <h1>BATTLE LOG DASHBOARD</h1>
+            <div style="text-align: right;">
+                <span id="player-tag" style="color: var(--text-muted); font-size: 0.9rem;">#C92LJPYG</span>
+            </div>
+        </header>
+
+        <div class="bento-grid">
+            
+            <div class="card col-span-1">
+                <h3>Overall Win Rate</h3>
+                <div style="height: 150px; position: relative;">
                     <canvas id="winRateChart"></canvas>
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight: bold; font-size: 1.2rem;">
+                        <span id="win-pct">0%</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="card">
-                <h3 style="text-align:center">Top Cards You Lose Against</h3>
-                <div class="chart-container">
-                    <canvas id="nemesisChart"></canvas>
+            <div class="card col-span-2">
+                <h3>Recent Form (Last 30 Games)</h3>
+                <div class="form-bar" id="form-bar"></div>
+                <div style="display: flex; justify-content: space-between; margin-top: 15px;">
+                    <div>
+                        <span class="kpi-number" id="net-trophies">+0</span>
+                        <span class="kpi-sub">Net Trophies</span>
+                    </div>
+                    <div>
+                        <span class="kpi-number" id="current-streak">0</span>
+                        <span class="kpi-sub">Current Streak</span>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="card">
-            <h3>Recent Matches</h3>
-            <ul id="matchHistory" class="match-list"></ul>
+            <div class="card col-span-1">
+                <h3>Elixir Leaked (Avg)</h3>
+                <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+                    <div style="text-align: center;">
+                        <span class="kpi-number" style="color: var(--accent-loss);" id="my-leak">0.0</span>
+                        <span class="kpi-sub">You</span>
+                    </div>
+                    <div style="text-align: center;">
+                        <span class="kpi-number" style="color: var(--accent-win);" id="opp-leak">0.0</span>
+                        <span class="kpi-sub">Opponent</span>
+                    </div>
+                </div>
+                <p style="font-size: 0.8rem; color: #666; margin-top: 10px;">Lower is better. High leaks = wasted elixir.</p>
+            </div>
+
+            <div class="card col-span-2">
+                <h3>Battle Activity by Hour</h3>
+                <div style="height: 200px;">
+                    <canvas id="hourChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card col-span-2 row-span-2">
+                <h3>Top 8 Cards Causing Losses</h3>
+                <div class="nemesis-grid" id="nemesis-grid">
+                    </div>
+            </div>
+
+            <div class="card col-span-2">
+                <h3>Match History</h3>
+                <div class="match-list" id="match-list">
+                    </div>
+            </div>
+
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
-</html>
+</html> 
