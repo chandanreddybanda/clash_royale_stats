@@ -2,73 +2,76 @@ import requests
 import json
 import os
 
-# 1. Configuration
+# CONFIGURATION
 API_TOKEN = os.environ.get("CR_API_TOKEN") 
-PLAYER_TAG = "#C92LJPYG"
-BASE_URL = "https://proxy.royaleapi.dev/v1"
-MASTER_FILE = "battlelog_master.json"
+PLAYER_TAG = "#C92LJPYG" 
+BASE_URL = "https://proxy.royaleapi.dev/v1" # Using Proxy
 
-def fetch_and_update():
+def fetch_all_data():
     if not API_TOKEN:
-        raise ValueError("API Token is missing! Set CR_API_TOKEN environment variable.")
+        raise ValueError("API Token is missing! Check GitHub Secrets.")
 
-    # --- Step 1: Load Existing Master Data ---
-    if os.path.exists(MASTER_FILE):
-        try:
-            with open(MASTER_FILE, "r", encoding="utf-8") as f:
-                master_data = json.load(f)
-                print(f"Loaded {len(master_data)} existing battles from {MASTER_FILE}.")
-        except json.JSONDecodeError:
-            print("Master file corrupted. Starting fresh.")
-            master_data = []
-    else:
-        print("No master file found. Creating new one.")
-        master_data = []
-
-    # Create a set of existing battle times for fast duplicate checking
-    # (A player cannot finish two battles at the exact same second)
-    existing_times = {battle.get("battleTime") for battle in master_data}
-
-    # --- Step 2: Fetch New Data from API ---
-    formatted_tag = PLAYER_TAG.replace("#", "%23")
-    url = f"{BASE_URL}/players/{formatted_tag}/battlelog"
-    
     headers = {
         "Authorization": f"Bearer {API_TOKEN}",
         "Accept": "application/json"
     }
-
-    print(f"Fetching latest battle log for {PLAYER_TAG}...")
-    response = requests.get(url, headers=headers)
     
-    if response.status_code != 200:
-        print(f"Failed to fetch data: {response.status_code} - {response.text}")
-        exit(1)
+    # URL Safe Tag
+    formatted_tag = PLAYER_TAG.replace("#", "%23")
 
-    new_battles = response.json()
-    
-    # --- Step 3: Filter Duplicates and Append ---
-    added_count = 0
-    # API returns newest first. We iterate through them.
-    for battle in new_battles:
-        b_time = battle.get("battleTime")
+    # --- TASK 1: Fetch Player Profile (New!) ---
+    print(f"Fetching Profile for {PLAYER_TAG}...")
+    try:
+        url_profile = f"{BASE_URL}/players/{formatted_tag}"
+        resp_profile = requests.get(url_profile, headers=headers)
         
-        if b_time not in existing_times:
-            master_data.append(battle)
-            existing_times.add(b_time) # Update set in case API has internal dupes
-            added_count += 1
-    
-    # Sort data by battleTime descending (Newest first)
-    master_data.sort(key=lambda x: x.get("battleTime", ""), reverse=True)
+        if resp_profile.status_code == 200:
+            # Save as a separate file 'player.json'
+            with open("player.json", "w", encoding="utf-8") as f:
+                json.dump(resp_profile.json(), f, indent=4)
+            print("✅ success: player.json updated")
+        else:
+            print(f"❌ profile failed: {resp_profile.status_code}")
+    except Exception as e:
+        print(f"❌ profile error: {e}")
 
-    # --- Step 4: Save Updated Master File ---
-    if added_count > 0:
-        with open(MASTER_FILE, "w", encoding="utf-8") as f:
+    # --- TASK 2: Fetch Battle Log (Existing) ---
+    print(f"Fetching Battle Log...")
+    master_data = []
+    
+    # Load existing master file if it exists
+    if os.path.exists("battlelog_master.json"):
+        try:
+            with open("battlelog_master.json", "r", encoding="utf-8") as f:
+                master_data = json.load(f)
+        except: pass
+
+    # Fast lookup for existing games
+    existing_times = {b.get("battleTime") for b in master_data}
+    
+    url_log = f"{BASE_URL}/players/{formatted_tag}/battlelog"
+    resp_log = requests.get(url_log, headers=headers)
+    
+    if resp_log.status_code == 200:
+        new_battles = resp_log.json()
+        added_count = 0
+        
+        # Append only new unique games
+        for battle in new_battles:
+            if battle.get("battleTime") not in existing_times:
+                master_data.append(battle)
+                existing_times.add(battle.get("battleTime"))
+                added_count += 1
+        
+        # Sort newest first
+        master_data.sort(key=lambda x: x.get("battleTime", ""), reverse=True)
+        
+        # Save Master Log
+        with open("battlelog_master.json", "w", encoding="utf-8") as f:
             json.dump(master_data, f, indent=4)
-        print(f"Success! Added {added_count} new unique battles.")
-        print(f"Total battles in master: {len(master_data)}")
+        print(f"✅ success: battlelog_master.json updated (+{added_count} games)")
     else:
-        print("No new battles found since last run.")
+        print(f"❌ log failed: {resp_log.status_code}")
 
 if __name__ == "__main__":
-    fetch_and_update()
+    fetch_all_data()

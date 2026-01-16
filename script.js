@@ -1,14 +1,38 @@
 let rawBattles = [];
+let playerProfile = {};
 let charts = {};
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("battlelog_master.json?t=" + Date.now())
-    .then((res) => res.json())
-    .then((data) => {
-      rawBattles = data;
+  Promise.all([
+    fetch("player.json?t=" + Date.now()).then((r) => r.json()),
+    fetch("battlelog_master.json?t=" + Date.now()).then((r) => r.json()),
+  ])
+    .then(([playerData, battleData]) => {
+      playerProfile = playerData;
+      rawBattles = battleData;
 
-      // Meta Info
-      document.getElementById("total-games").innerText = rawBattles.length;
+      // Header Info
+      document.getElementById("player-name").innerText =
+        playerProfile.name || "Unknown";
+      document.getElementById("player-level").innerText =
+        playerProfile.expLevel || "0";
+      document.getElementById("clan-name").innerText = playerProfile.clan
+        ? playerProfile.clan.name
+        : "No Clan";
+
+      // Season Card
+      document.getElementById("current-trophies").innerText =
+        playerProfile.trophies || 0;
+      document.getElementById("best-trophies").innerText =
+        playerProfile.bestTrophies || 0;
+      document.getElementById("total-wins").innerText = playerProfile.wins || 0;
+
+      if (playerProfile.currentFavouriteCard) {
+        document.getElementById("fav-card").src =
+          playerProfile.currentFavouriteCard.iconUrls.medium;
+      }
+
+      // Timestamp
       if (rawBattles.length > 0) {
         const latestDate = parseClashDate(rawBattles[0].battleTime);
         if (latestDate) {
@@ -31,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
     .addEventListener("change", updateDashboard);
 });
 
-// Helper: Fix Clash Time Format
 function parseClashDate(str) {
   if (!str) return null;
   const formatted = str.replace(
@@ -43,8 +66,6 @@ function parseClashDate(str) {
 
 function updateDashboard() {
   const filterMode = document.getElementById("modeFilter").value;
-
-  // 1. Filter
   const battles = rawBattles.filter((b) => {
     if (filterMode === "PvP_Ladder")
       return b.type === "PvP" && b.gameMode.name === "Ladder";
@@ -52,15 +73,12 @@ function updateDashboard() {
     return true;
   });
 
-  // 2. Stats
   const stats = calculateStats(battles);
 
-  // 3. Render
   renderWinChart(stats.wins, stats.losses, stats.draws);
   renderForm(battles.slice(0, 30).reverse());
-  renderSkill(battles);
-  renderHourlyChart(stats.hourlyCounts); // New Hourly Chart
   renderTrophyChart(battles.slice(0, 50).reverse());
+  renderHourlyChart(stats.hourlyCounts); // RESTORED
   renderNemesisList(stats.nemesisMap);
   renderHistory(battles.slice(0, 20));
 }
@@ -74,7 +92,7 @@ function calculateStats(battles) {
     hourlyCounts: new Array(24).fill(0),
   };
 
-  // IST Formatter for Hour extraction
+  // IST Formatter
   const istHourFormatter = new Intl.DateTimeFormat("en-US", {
     timeZone: "Asia/Kolkata",
     hour: "numeric",
@@ -82,29 +100,25 @@ function calculateStats(battles) {
   });
 
   battles.forEach((b) => {
-    const me = b.team[0];
-    const opp = b.opponent[0];
-    const tChange = me.trophyChange || 0;
+    const tChange = b.team[0].trophyChange || 0;
 
     // Win/Loss
     if (tChange > 0) s.wins++;
     else if (tChange < 0) {
       s.losses++;
-      opp.cards.forEach((c) => {
+      b.opponent[0].cards.forEach((c) => {
         if (!s.nemesisMap[c.name])
           s.nemesisMap[c.name] = { count: 0, img: c.iconUrls.medium };
         s.nemesisMap[c.name].count++;
       });
     } else s.draws++;
 
-    // Hourly Activity (IST)
+    // Hourly Activity
     const dateObj = parseClashDate(b.battleTime);
     if (dateObj) {
       try {
-        // Returns string "14" or "2", parse it to int
-        const hourStr = istHourFormatter.format(dateObj);
-        let hour = parseInt(hourStr);
-        if (hour === 24) hour = 0; // Fix edge case if formatter returns 24
+        let hour = parseInt(istHourFormatter.format(dateObj));
+        if (hour === 24) hour = 0;
         if (!isNaN(hour)) s.hourlyCounts[hour]++;
       } catch (e) {}
     }
@@ -146,7 +160,7 @@ function renderHourlyChart(hourlyData) {
   destroyChart("hourChart");
   const ctx = document.getElementById("hourChart").getContext("2d");
 
-  // Create Gradient
+  // Gradient
   const gradient = ctx.createLinearGradient(0, 0, 0, 200);
   gradient.addColorStop(0, "rgba(255, 193, 7, 0.4)");
   gradient.addColorStop(1, "rgba(255, 193, 7, 0)");
@@ -154,7 +168,7 @@ function renderHourlyChart(hourlyData) {
   charts["hourChart"] = new Chart(ctx, {
     type: "bar",
     data: {
-      labels: [...Array(24).keys()].map((h) => `${h}:00`), // 0:00 to 23:00
+      labels: [...Array(24).keys()].map((h) => `${h}:00`),
       datasets: [
         {
           label: "Games Played",
@@ -180,11 +194,10 @@ function renderTrophyChart(battles) {
   destroyChart("trophyChart");
   const ctx = document.getElementById("trophyChart").getContext("2d");
 
-  const dataPoints = battles.map((b) => {
-    const start = b.team[0].startingTrophies || 0;
-    const change = b.team[0].trophyChange || 0;
-    return start + change;
-  });
+  // We add trophyChange to startTrophies to get "Ending Trophies"
+  const dataPoints = battles.map(
+    (b) => (b.team[0].startingTrophies || 0) + (b.team[0].trophyChange || 0)
+  );
   const labels = battles.map((_, i) => i + 1);
 
   charts["trophyChart"] = new Chart(ctx, {
@@ -223,16 +236,14 @@ function renderNemesisList(map) {
   const sorted = Object.entries(map)
     .sort((a, b) => b[1].count - a[1].count)
     .slice(0, 10);
-
   sorted.forEach(([name, data], i) => {
     const div = document.createElement("div");
     div.className = "nemesis-item";
-    div.innerHTML = `
-            <span class="nemesis-rank">#${i + 1}</span>
-            <img src="${data.img}" class="nemesis-img">
-            <span class="nemesis-name">${name}</span>
-            <span class="nemesis-count">${data.count} L</span>
-        `;
+    div.innerHTML = `<span class="nemesis-rank">#${i + 1}</span><img src="${
+      data.img
+    }" class="nemesis-img"><span class="nemesis-name">${name}</span><span class="nemesis-count">${
+      data.count
+    } L</span>`;
     list.appendChild(div);
   });
 }
@@ -242,58 +253,37 @@ function renderForm(battles) {
   bar.innerHTML = "";
   let net = 0;
   let streak = 0;
-
   battles.forEach((b) => {
     const ch = b.team[0].trophyChange || 0;
     net += ch;
     if (ch > 0) streak = streak >= 0 ? streak + 1 : 1;
     else if (ch < 0) streak = streak <= 0 ? streak - 1 : -1;
-
     const el = document.createElement("div");
     el.className = "form-segment";
     el.style.backgroundColor =
       ch > 0 ? "#00d26a" : ch < 0 ? "#f94144" : "#577590";
     bar.appendChild(el);
   });
-
-  const streakEl = document.getElementById("current-streak");
-  streakEl.innerText = streak > 0 ? "+" + streak : streak;
-  streakEl.style.color = streak > 0 ? "#00d26a" : "#f94144";
-
-  const netEl = document.getElementById("net-trophies");
-  netEl.innerText = (net > 0 ? "+" : "") + net;
-  netEl.style.color = net >= 0 ? "#00d26a" : "#f94144";
-}
-
-function renderSkill(battles) {
-  if (!battles.length) return;
-  let myL = 0,
-    oppL = 0;
-  battles.forEach((b) => {
-    myL += b.team[0].elixirLeaked || 0;
-    oppL += b.opponent[0].elixirLeaked || 0;
-  });
-  document.getElementById("my-leak").innerText = (myL / battles.length).toFixed(
-    2
-  );
-  document.getElementById("opp-leak").innerText = (
-    oppL / battles.length
-  ).toFixed(2);
+  document.getElementById("current-streak").innerText =
+    (streak > 0 ? "+" : "") + streak;
+  document.getElementById("current-streak").style.color =
+    streak > 0 ? "#00d26a" : "#f94144";
+  document.getElementById("net-trophies").innerText =
+    (net > 0 ? "+" : "") + net;
+  document.getElementById("net-trophies").style.color =
+    net >= 0 ? "#00d26a" : "#f94144";
 }
 
 function renderHistory(battles) {
   const list = document.getElementById("match-list");
   list.innerHTML = "";
-
   battles.forEach((b) => {
     const me = b.team[0];
-    const opp = b.opponent[0];
     const change = me.trophyChange || 0;
     const isWin = change > 0;
-
-    const oppDeckHtml = opp.cards
+    const oppDeckHtml = b.opponent[0].cards
       .slice(0, 8)
-      .map((c) => `<img src="${c.iconUrls.medium}" title="${c.name}">`)
+      .map((c) => `<img src="${c.iconUrls.medium}">`)
       .join("");
     const dateObj = parseClashDate(b.battleTime);
     const timeStr = dateObj
@@ -302,17 +292,11 @@ function renderHistory(battles) {
 
     const row = document.createElement("div");
     row.className = `match-row ${isWin ? "win" : "loss"}`;
-
-    row.innerHTML = `
-            <div>
-                <div class="res-box ${isWin ? "win" : "loss"}">${
+    row.innerHTML = `<div><div class="res-box ${isWin ? "win" : "loss"}">${
       change > 0 ? "+" : ""
-    }${change}</div>
-                <span class="vs-name">vs ${opp.name}</span>
-            </div>
-            <div class="deck-strip">${oppDeckHtml}</div>
-            <div class="time-box">${timeStr}</div>
-        `;
+    }${change}</div><span class="vs-name">vs ${
+      b.opponent[0].name
+    }</span></div><div class="deck-strip">${oppDeckHtml}</div><div style="text-align:right; color:#666; font-size:0.85rem;">${timeStr}</div>`;
     list.appendChild(row);
   });
 }

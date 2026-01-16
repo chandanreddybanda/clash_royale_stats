@@ -9,6 +9,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#0f1014" />
     <style>
       :root {
         --bg-color: #0f1014;
@@ -20,7 +22,6 @@
         --accent-draw: #577590;
         --border-color: #2d3039;
       }
-
       body {
         font-family: "Inter", sans-serif;
         background-color: var(--bg-color);
@@ -33,42 +34,80 @@
         margin: 0 auto;
       }
 
-      /* HEADER & CONTROLS */
+      /* --- HEADER (FIXED) --- */
       header {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-end;
         margin-bottom: 25px;
-        flex-wrap: wrap;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #333;
+        gap: 20px;
+      }
+
+      .header-left {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .header-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 8px;
+      }
+
+      .profile-main {
+        display: flex;
+        align-items: center;
         gap: 15px;
+      }
+      .level-badge {
+        background: #0099ff;
+        color: white;
+        padding: 2px 8px;
+        border-radius: 6px;
+        font-weight: 800;
+        font-size: 1.1rem;
+        border: 2px solid #0055aa;
       }
       h1 {
         font-weight: 800;
-        font-size: 2rem;
+        font-size: 2.2rem;
         margin: 0;
-        background: linear-gradient(90deg, #fff, #888);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        line-height: 1.1;
+      }
+      .clan-info {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .clan-badge {
+        color: #ffc107;
+      }
+
+      select {
+        background: #333;
+        color: white;
+        padding: 10px 14px;
+        border-radius: 8px;
+        border: 1px solid #444;
+        cursor: pointer;
+        font-size: 0.9rem;
       }
       .meta-info {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         color: var(--text-muted);
-        text-align: right;
       }
       .highlight {
         color: #ffc107;
         font-weight: bold;
       }
-      select {
-        background: #333;
-        color: white;
-        padding: 8px 12px;
-        border-radius: 6px;
-        border: 1px solid #444;
-        cursor: pointer;
-      }
 
-      /* BENTO GRID */
+      /* --- BENTO GRID --- */
       .bento-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -106,30 +145,52 @@
         grid-row: span 2;
       }
 
-      /* KPIS */
+      /* KPI & FAV CARD */
+      .kpi-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: auto;
+      }
+      .kpi-block {
+        text-align: left;
+      }
       .kpi-number {
         font-size: 2.2rem;
         font-weight: 800;
         display: block;
+        line-height: 1;
       }
-      .kpi-sub {
+      .kpi-label {
         font-size: 0.85rem;
         color: var(--text-muted);
+        margin-top: 5px;
+        display: block;
       }
+
+      .fav-card-img {
+        height: 55px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5));
+        z-index: 10;
+      }
+
       .form-bar {
         display: flex;
         gap: 3px;
-        height: 24px;
+        height: 12px;
         align-items: center;
-        margin-bottom: 15px;
+        margin-top: auto;
       }
       .form-segment {
         flex: 1;
         height: 100%;
-        border-radius: 3px;
+        border-radius: 2px;
       }
 
-      /* MATCH HISTORY */
+      /* CHARTS & LISTS */
       .match-list {
         display: flex;
         flex-direction: column;
@@ -139,16 +200,12 @@
       }
       .match-row {
         display: grid;
-        grid-template-columns: 80px 1fr 120px;
+        grid-template-columns: 80px 1fr 100px;
         align-items: center;
         background: #252830;
         padding: 10px 15px;
         border-radius: 8px;
         border-left: 4px solid transparent;
-        transition: transform 0.1s;
-      }
-      .match-row:hover {
-        background: #2a2d36;
       }
       .match-row.win {
         border-left-color: var(--accent-win);
@@ -156,7 +213,16 @@
       .match-row.loss {
         border-left-color: var(--accent-loss);
       }
-
+      .deck-strip {
+        display: flex;
+        gap: 4px;
+        justify-content: center;
+      }
+      .deck-strip img {
+        width: 28px;
+        height: 34px;
+        object-fit: contain;
+      }
       .res-box {
         font-weight: 800;
         font-size: 1.1rem;
@@ -167,31 +233,7 @@
       .res-box.loss {
         color: var(--accent-loss);
       }
-      .vs-name {
-        font-size: 0.8rem;
-        color: #888;
-        display: block;
-        margin-top: 2px;
-      }
 
-      .deck-strip {
-        display: flex;
-        gap: 4px;
-        justify-content: center;
-      }
-      .deck-strip img {
-        width: 30px;
-        height: 36px;
-        object-fit: contain;
-      }
-      .time-box {
-        text-align: right;
-        font-size: 0.85rem;
-        color: #666;
-        font-weight: 500;
-      }
-
-      /* NEMESIS LIST */
       .nemesis-item {
         display: flex;
         align-items: center;
@@ -221,7 +263,7 @@
         font-size: 0.9rem;
       }
 
-      /* RESPONSIVE OPTIMIZATION */
+      /* --- MOBILE OPTIMIZATION --- */
       @media (max-width: 1000px) {
         .bento-grid {
           grid-template-columns: 1fr;
@@ -233,32 +275,31 @@
         }
       }
 
-      /* Extra tweak for Phones to fix Match History */
       @media (max-width: 600px) {
-        .container {
-          padding: 10px;
+        /* Fix Header Stacking */
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 15px;
+        }
+        .header-right {
+          width: 100%;
+          align-items: flex-start;
+          flex-direction: row; /* Put Select and Time on same row */
+          justify-content: space-between;
+          align-items: center;
+        }
+        select {
+          flex-grow: 1;
+          margin-right: 10px;
         }
 
-        /* Make the match row stack: Text on top, Cards on bottom */
-        .match-row {
-          grid-template-columns: 1fr auto; /* Row 1: Result | Time */
-          grid-template-rows: auto auto; /* Row 2: Cards */
-          gap: 8px;
-        }
-
-        /* Move the cards to the second row, spanning full width */
-        .deck-strip {
-          grid-column: 1 / -1;
-          justify-content: space-between; /* Spread cards out evenly */
-        }
-
-        .deck-strip img {
-          width: 11%; /* Auto-shrink cards to fit screen width */
-          height: auto;
-        }
-
+        /* Fix KPI Sizes */
         .kpi-number {
           font-size: 1.8rem;
+        }
+        h1 {
+          font-size: 1.6rem;
         }
       }
     </style>
@@ -266,24 +307,58 @@
   <body>
     <div class="container">
       <header>
-        <div>
-          <h1>BATTLE ANALYTICS</h1>
-          <div class="meta-info">
-            Games Tracked: <span id="total-games" class="highlight">0</span> |
-            Latest: <span id="last-updated" class="highlight">--</span>
+        <div class="header-left">
+          <div class="profile-main">
+            <span class="level-badge" id="player-level">00</span>
+            <h1 id="player-name">Loading...</h1>
+          </div>
+          <div class="clan-info">
+            <span class="clan-badge">🛡</span> <span id="clan-name">...</span>
           </div>
         </div>
-        <select id="modeFilter">
-          <option value="PvP_Ladder">⚔️ PvP Ladder</option>
-          <option value="PvP_All">🔥 All PvP</option>
-          <option value="All">🌍 All Battles</option>
-        </select>
+
+        <div class="header-right">
+          <select id="modeFilter">
+            <option value="PvP_Ladder">⚔️ PvP Ladder</option>
+            <option value="PvP_All">🔥 All PvP</option>
+            <option value="All">🌍 All Battles</option>
+          </select>
+          <div class="meta-info">
+            Updated: <span id="last-updated" class="highlight">--</span>
+          </div>
+        </div>
       </header>
 
       <div class="bento-grid">
+        <div class="card col-span-2">
+          <h3>Season & Career</h3>
+          <img id="fav-card" class="fav-card-img" src="" alt="" />
+          <div class="kpi-row" style="margin-top: 30px">
+            <div class="kpi-block">
+              <span class="kpi-number highlight" id="current-trophies">0</span>
+              <span class="kpi-label">Current Trophies</span>
+            </div>
+            <div class="kpi-block">
+              <span class="kpi-number" id="best-trophies" style="color: #aaa"
+                >0</span
+              >
+              <span class="kpi-label">Personal Best</span>
+            </div>
+            <div class="kpi-block">
+              <span
+                class="kpi-number"
+                id="total-wins"
+                style="color: var(--accent-win)"
+                >0</span
+              >
+              <span class="kpi-label">Total Wins</span>
+            </div>
+          </div>
+        </div>
+
         <div class="card col-span-1">
-          <h3>Win Rate</h3>
-          <div style="height: 140px; position: relative">
+          <h3>Win Rate (Log)</h3>
+          <div style="height: 100px; position: relative">
             <canvas id="winRateChart"></canvas>
             <div
               style="
@@ -300,47 +375,34 @@
           </div>
         </div>
 
-        <div class="card col-span-2">
-          <h3>Recent Form (30 Games)</h3>
-          <div class="form-bar" id="form-bar"></div>
-          <div style="display: flex; justify-content: space-between">
-            <div>
-              <span class="kpi-number" id="net-trophies">+0</span
-              ><span class="kpi-sub">Net Trophies</span>
+        <div class="card col-span-1">
+          <h3>Form (Last 30)</h3>
+          <div
+            style="
+              flex-grow: 1;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+              "
+            >
+              <span class="kpi-number" id="current-streak">0</span>
+              <span class="kpi-number" id="net-trophies">+0</span>
             </div>
-            <div>
-              <span class="kpi-number" id="current-streak">0</span
-              ><span class="kpi-sub">Current Streak</span>
-            </div>
+            <div class="form-bar" id="form-bar"></div>
           </div>
         </div>
 
-        <div class="card col-span-1">
-          <h3>Elixir Leaked</h3>
-          <div
-            style="
-              display: flex;
-              justify-content: space-around;
-              align-items: flex-end;
-              height: 100%;
-            "
-          >
-            <div style="text-align: center">
-              <span
-                class="kpi-number"
-                style="color: var(--accent-loss)"
-                id="my-leak"
-                >0.0</span
-              ><span class="kpi-sub">You</span>
-            </div>
-            <div style="text-align: center">
-              <span
-                class="kpi-number"
-                style="color: var(--accent-win)"
-                id="opp-leak"
-                >0.0</span
-              ><span class="kpi-sub">Opponent</span>
-            </div>
+        <div class="card col-span-2">
+          <h3>Trophy Progression (Last 50)</h3>
+          <div style="height: 200px">
+            <canvas id="trophyChart"></canvas>
           </div>
         </div>
 
@@ -348,13 +410,6 @@
           <h3>Activity by Hour (IST)</h3>
           <div style="height: 200px">
             <canvas id="hourChart"></canvas>
-          </div>
-        </div>
-
-        <div class="card col-span-2">
-          <h3>Trophy Progression</h3>
-          <div style="height: 200px">
-            <canvas id="trophyChart"></canvas>
           </div>
         </div>
 
@@ -368,21 +423,6 @@
 
         <div class="card col-span-2 row-span-2" style="max-height: 600px">
           <h3>Match History</h3>
-          <div
-            style="
-              display: grid;
-              grid-template-columns: 80px 1fr 120px;
-              padding: 0 15px 10px;
-              color: #666;
-              font-size: 0.75rem;
-              font-weight: 600;
-              text-transform: uppercase;
-            "
-          >
-            <span>Result</span>
-            <span style="text-align: center">Opponent Deck</span>
-            <span style="text-align: right">Time</span>
-          </div>
           <div class="match-list" id="match-list"></div>
         </div>
       </div>
