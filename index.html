@@ -1,153 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clash Royale Pro Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        :root {
-            --bg-color: #0f1014;
-            --card-bg: #1b1d24;
-            --text-main: #ffffff;
-            --text-muted: #8a8d96;
-            --accent-win: #00d26a;
-            --accent-loss: #f94144;
-            --accent-draw: #577590;
-            --accent-gold: #ffc107;
-            --border-color: #2d3039;
-        }
+      :root {
+        --bg-color: #0f1014;
+        --card-bg: #1b1d24;
+        --text-main: #ffffff;
+        --text-muted: #8a8d96;
+        --accent-win: #00d26a;
+        --accent-loss: #f94144;
+        --accent-draw: #577590;
+        --border-color: #2d3039;
+      }
 
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); margin: 0; padding: 20px; }
-        .container { max-width: 1400px; margin: 0 auto; }
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        margin: 0;
+        padding: 20px;
+      }
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
 
-        /* HEADER */
-        header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
-        h1 { font-weight: 800; font-size: 2rem; margin: 0; background: linear-gradient(90deg, #fff, #888); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .refresh-btn { background: #333; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: 600; }
+      /* HEADER & CONTROLS */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+      h1 {
+        font-weight: 800;
+        font-size: 2rem;
+        margin: 0;
+        background: linear-gradient(90deg, #fff, #888);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .meta-info {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        text-align: right;
+      }
+      .highlight {
+        color: #ffc107;
+        font-weight: bold;
+      }
+      select {
+        background: #333;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 6px;
+        border: 1px solid #444;
+        cursor: pointer;
+      }
 
-        /* BENTO GRID LAYOUT */
+      /* BENTO GRID */
+      .bento-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+      .card {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        padding: 20px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
+      .card h3 {
+        margin-top: 0;
+        color: var(--text-muted);
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      .col-span-1 {
+        grid-column: span 1;
+      }
+      .col-span-2 {
+        grid-column: span 2;
+      }
+      .col-span-4 {
+        grid-column: span 4;
+      }
+      .row-span-2 {
+        grid-row: span 2;
+      }
+
+      /* KPIS */
+      .kpi-number {
+        font-size: 2.2rem;
+        font-weight: 800;
+        display: block;
+      }
+      .kpi-sub {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+      }
+      .form-bar {
+        display: flex;
+        gap: 3px;
+        height: 24px;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+      .form-segment {
+        flex: 1;
+        height: 100%;
+        border-radius: 3px;
+      }
+
+      /* MATCH HISTORY */
+      .match-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        overflow-y: auto;
+        padding-right: 5px;
+      }
+      .match-row {
+        display: grid;
+        grid-template-columns: 80px 1fr 120px;
+        align-items: center;
+        background: #252830;
+        padding: 10px 15px;
+        border-radius: 8px;
+        border-left: 4px solid transparent;
+        transition: transform 0.1s;
+      }
+      .match-row:hover {
+        background: #2a2d36;
+      }
+      .match-row.win {
+        border-left-color: var(--accent-win);
+      }
+      .match-row.loss {
+        border-left-color: var(--accent-loss);
+      }
+
+      .res-box {
+        font-weight: 800;
+        font-size: 1.1rem;
+      }
+      .res-box.win {
+        color: var(--accent-win);
+      }
+      .res-box.loss {
+        color: var(--accent-loss);
+      }
+      .vs-name {
+        font-size: 0.8rem;
+        color: #888;
+        display: block;
+        margin-top: 2px;
+      }
+
+      .deck-strip {
+        display: flex;
+        gap: 4px;
+        justify-content: center;
+      }
+      .deck-strip img {
+        width: 30px;
+        height: 36px;
+        object-fit: contain;
+      }
+      .time-box {
+        text-align: right;
+        font-size: 0.85rem;
+        color: #666;
+        font-weight: 500;
+      }
+
+      /* NEMESIS LIST */
+      .nemesis-item {
+        display: flex;
+        align-items: center;
+        background: #252830;
+        margin-bottom: 6px;
+        padding: 8px;
+        border-radius: 6px;
+      }
+      .nemesis-rank {
+        font-weight: bold;
+        color: #555;
+        width: 20px;
+        font-size: 0.9rem;
+      }
+      .nemesis-img {
+        width: 32px;
+        margin-right: 12px;
+      }
+      .nemesis-name {
+        flex-grow: 1;
+        font-weight: 600;
+        font-size: 0.85rem;
+      }
+      .nemesis-count {
+        color: var(--accent-loss);
+        font-weight: bold;
+        font-size: 0.9rem;
+      }
+
+      /* RESPONSIVE OPTIMIZATION */
+      @media (max-width: 1000px) {
         .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: auto auto;
-            gap: 20px;
+          grid-template-columns: 1fr;
+        }
+        .col-span-1,
+        .col-span-2,
+        .col-span-4 {
+          grid-column: span 1;
+        }
+      }
+
+      /* Extra tweak for Phones to fix Match History */
+      @media (max-width: 600px) {
+        .container {
+          padding: 10px;
         }
 
-        /* CARD STYLES */
-        .card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 20px; position: relative; overflow: hidden; }
-        .card h3 { margin-top: 0; color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; }
-        
-        /* SPECIFIC CARD SIZES */
-        .col-span-1 { grid-column: span 1; }
-        .col-span-2 { grid-column: span 2; }
-        .col-span-4 { grid-column: span 4; }
-        .row-span-2 { grid-row: span 2; }
+        /* Make the match row stack: Text on top, Cards on bottom */
+        .match-row {
+          grid-template-columns: 1fr auto; /* Row 1: Result | Time */
+          grid-template-rows: auto auto; /* Row 2: Cards */
+          gap: 8px;
+        }
 
-        /* KPI NUMBERS */
-        .kpi-number { font-size: 2.5rem; font-weight: 800; display: block; }
-        .kpi-sub { font-size: 0.9rem; color: var(--text-muted); }
+        /* Move the cards to the second row, spanning full width */
+        .deck-strip {
+          grid-column: 1 / -1;
+          justify-content: space-between; /* Spread cards out evenly */
+        }
 
-        /* FORM BAR (UPDATED) */
-        .form-bar { display: flex; gap: 4px; height: 30px; align-items: center; }
-        .form-segment { flex: 1; height: 100%; border-radius: 4px; transition: transform 0.2s; position: relative; }
-        .form-segment:hover { transform: scaleY(1.2); z-index: 10; }
-        
-        /* MATCH HISTORY LIST */
-        .match-list { display: flex; flex-direction: column; gap: 10px; max-height: 400px; overflow-y: auto; padding-right: 5px; }
-        .match-item { background: #252830; padding: 12px; border-radius: 8px; display: flex; align-items: center; justify-content: space-between; border-left: 4px solid transparent; }
-        .match-item.win { border-left-color: var(--accent-win); }
-        .match-item.loss { border-left-color: var(--accent-loss); }
-        .opp-deck { display: flex; gap: -5px; }
-        .opp-deck img { width: 25px; height: 30px; object-fit: contain; margin-left: -10px; border-radius: 2px; border: 1px solid #000; }
-        
-        /* NEMESIS GRID */
-        .nemesis-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: 10px; }
-        .nemesis-card { background: #252830; border-radius: 8px; padding: 10px; text-align: center; border: 1px solid var(--border-color); }
-        .nemesis-card img { width: 100%; height: auto; filter: drop-shadow(0 4px 4px rgba(0,0,0,0.5)); }
-        .nemesis-count { color: var(--accent-loss); font-weight: bold; font-size: 0.9rem; display: block; margin-top: 5px; }
+        .deck-strip img {
+          width: 11%; /* Auto-shrink cards to fit screen width */
+          height: auto;
+        }
 
-        /* SCROLLBAR */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
-
-        @media (max-width: 1000px) { .bento-grid { grid-template-columns: 1fr; } .col-span-1, .col-span-2, .col-span-4 { grid-column: span 1; } }
+        .kpi-number {
+          font-size: 1.8rem;
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <h1>BATTLE LOG DASHBOARD</h1>
-            <div style="text-align: right;">
-                <span id="player-tag" style="color: var(--text-muted); font-size: 0.9rem;">#C92LJPYG</span>
-            </div>
-        </header>
-
-        <div class="bento-grid">
-            
-            <div class="card col-span-1">
-                <h3>Overall Win Rate</h3>
-                <div style="height: 150px; position: relative;">
-                    <canvas id="winRateChart"></canvas>
-                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight: bold; font-size: 1.2rem;">
-                        <span id="win-pct">0%</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card col-span-2">
-                <h3>Recent Form (Last 30 Games)</h3>
-                <div class="form-bar" id="form-bar"></div>
-                <div style="display: flex; justify-content: space-between; margin-top: 15px;">
-                    <div>
-                        <span class="kpi-number" id="net-trophies">+0</span>
-                        <span class="kpi-sub">Net Trophies</span>
-                    </div>
-                    <div>
-                        <span class="kpi-number" id="current-streak">0</span>
-                        <span class="kpi-sub">Current Streak</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card col-span-1">
-                <h3>Elixir Leaked (Avg)</h3>
-                <div style="display: flex; justify-content: space-between; align-items: flex-end;">
-                    <div style="text-align: center;">
-                        <span class="kpi-number" style="color: var(--accent-loss);" id="my-leak">0.0</span>
-                        <span class="kpi-sub">You</span>
-                    </div>
-                    <div style="text-align: center;">
-                        <span class="kpi-number" style="color: var(--accent-win);" id="opp-leak">0.0</span>
-                        <span class="kpi-sub">Opponent</span>
-                    </div>
-                </div>
-                <p style="font-size: 0.8rem; color: #666; margin-top: 10px;">Lower is better. High leaks = wasted elixir.</p>
-            </div>
-
-            <div class="card col-span-2">
-                <h3>Battle Activity by Hour</h3>
-                <div style="height: 200px;">
-                    <canvas id="hourChart"></canvas>
-                </div>
-            </div>
-
-            <div class="card col-span-2 row-span-2">
-                <h3>Top 8 Cards Causing Losses</h3>
-                <div class="nemesis-grid" id="nemesis-grid">
-                    </div>
-            </div>
-
-            <div class="card col-span-2">
-                <h3>Match History</h3>
-                <div class="match-list" id="match-list">
-                    </div>
-            </div>
-
+      <header>
+        <div>
+          <h1>BATTLE ANALYTICS</h1>
+          <div class="meta-info">
+            Games Tracked: <span id="total-games" class="highlight">0</span> |
+            Latest: <span id="last-updated" class="highlight">--</span>
+          </div>
         </div>
-    </div>
+        <select id="modeFilter">
+          <option value="PvP_Ladder">⚔️ PvP Ladder</option>
+          <option value="PvP_All">🔥 All PvP</option>
+          <option value="All">🌍 All Battles</option>
+        </select>
+      </header>
 
+      <div class="bento-grid">
+        <div class="card col-span-1">
+          <h3>Win Rate</h3>
+          <div style="height: 140px; position: relative">
+            <canvas id="winRateChart"></canvas>
+            <div
+              style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-weight: bold;
+                font-size: 1.4rem;
+              "
+            >
+              <span id="win-pct">0%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card col-span-2">
+          <h3>Recent Form (30 Games)</h3>
+          <div class="form-bar" id="form-bar"></div>
+          <div style="display: flex; justify-content: space-between">
+            <div>
+              <span class="kpi-number" id="net-trophies">+0</span
+              ><span class="kpi-sub">Net Trophies</span>
+            </div>
+            <div>
+              <span class="kpi-number" id="current-streak">0</span
+              ><span class="kpi-sub">Current Streak</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card col-span-1">
+          <h3>Elixir Leaked</h3>
+          <div
+            style="
+              display: flex;
+              justify-content: space-around;
+              align-items: flex-end;
+              height: 100%;
+            "
+          >
+            <div style="text-align: center">
+              <span
+                class="kpi-number"
+                style="color: var(--accent-loss)"
+                id="my-leak"
+                >0.0</span
+              ><span class="kpi-sub">You</span>
+            </div>
+            <div style="text-align: center">
+              <span
+                class="kpi-number"
+                style="color: var(--accent-win)"
+                id="opp-leak"
+                >0.0</span
+              ><span class="kpi-sub">Opponent</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card col-span-2">
+          <h3>Activity by Hour (IST)</h3>
+          <div style="height: 200px">
+            <canvas id="hourChart"></canvas>
+          </div>
+        </div>
+
+        <div class="card col-span-2">
+          <h3>Trophy Progression</h3>
+          <div style="height: 200px">
+            <canvas id="trophyChart"></canvas>
+          </div>
+        </div>
+
+        <div
+          class="card col-span-2 row-span-2"
+          style="max-height: 600px; overflow-y: auto"
+        >
+          <h3>Nemesis Cards</h3>
+          <div id="nemesis-list"></div>
+        </div>
+
+        <div class="card col-span-2 row-span-2" style="max-height: 600px">
+          <h3>Match History</h3>
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 80px 1fr 120px;
+              padding: 0 15px 10px;
+              color: #666;
+              font-size: 0.75rem;
+              font-weight: 600;
+              text-transform: uppercase;
+            "
+          >
+            <span>Result</span>
+            <span style="text-align: center">Opponent Deck</span>
+            <span style="text-align: right">Time</span>
+          </div>
+          <div class="match-list" id="match-list"></div>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
-</body>
-</html> 
+  </body>
+</html>
