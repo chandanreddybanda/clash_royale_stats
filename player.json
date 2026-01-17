@@ -2,11 +2,11 @@
     "tag": "#C92LJPYG",
     "name": "\u00e7h\u00e3\u00f1d\u00e5\u00f1",
     "expLevel": 44,
-    "trophies": 9341,
+    "trophies": 9286,
     "bestTrophies": 9341,
-    "wins": 3430,
-    "losses": 2851,
-    "battleCount": 6281,
+    "wins": 3431,
+    "losses": 2854,
+    "battleCount": 6285,
     "threeCrownWins": 1035,
     "challengeCardsWon": 5014,
     "challengeMaxWins": 11,
@@ -30,7 +30,7 @@
     },
     "leagueStatistics": {
         "currentSeason": {
-            "trophies": 9341,
+            "trophies": 9286,
             "bestTrophies": 4150
         },
         "previousSeason": {
@@ -56,7 +56,7 @@
             "name": "BattleWins",
             "level": 6,
             "maxLevel": 8,
-            "progress": 3430,
+            "progress": 3431,
             "target": 5000,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/Hh18NG8LhvwZrcmtGR8rSKRezmhOxCilxqhroDLBnys.png"
@@ -164,12 +164,12 @@
         },
         {
             "name": "MasteryLog",
-            "level": 4,
+            "level": 5,
             "maxLevel": 10,
-            "progress": 4,
-            "target": 5,
+            "progress": 5,
+            "target": 6,
             "iconUrls": {
-                "large": "https://api-assets.clashroyale.com/playerbadges/512/O9Ukd9xWMvOufvdvl3r--sxZc3vT7-5IGysXxyCA4oU.png"
+                "large": "https://api-assets.clashroyale.com/playerbadges/512/bGKi2_zpQFulYEhuepKy7NNlyx3n3pO7Pkfqub0P-XA.png"
             }
         },
         {
@@ -843,7 +843,7 @@
             "level": 5,
             "maxLevel": 11,
             "rarity": "epic",
-            "count": 59,
+            "count": 62,
             "elixirCost": 6,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/fpnESbYqe5GyZmaVVYe-SEu7tE0Kxh_HZyVigzvLjks.png"
@@ -1993,7 +1993,7 @@
         "rarity": "rare"
     },
     "starPoints": 72187,
-    "expPoints": 3152,
+    "expPoints": 3252,
     "legacyTrophyRoadHighScore": 4951,
     "currentPathOfLegendSeasonResult": {
         "leagueNumber": 1,
@@ -2039,5 +2039,5 @@
             "bestTrophies": 0
         }
     },
-    "totalExpPoints": 256922
+    "totalExpPoints": 257022
 }
