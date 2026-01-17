@@ -2,12 +2,12 @@
     "tag": "#C92LJPYG",
     "name": "\u00e7h\u00e3\u00f1d\u00e5\u00f1",
     "expLevel": 44,
-    "trophies": 9195,
-    "bestTrophies": 9195,
-    "wins": 3416,
-    "losses": 2842,
-    "battleCount": 6258,
-    "threeCrownWins": 1034,
+    "trophies": 9314,
+    "bestTrophies": 9314,
+    "wins": 3429,
+    "losses": 2851,
+    "battleCount": 6280,
+    "threeCrownWins": 1035,
     "challengeCardsWon": 5014,
     "challengeMaxWins": 11,
     "tournamentCardsWon": 213,
@@ -30,7 +30,7 @@
     },
     "leagueStatistics": {
         "currentSeason": {
-            "trophies": 9195,
+            "trophies": 9314,
             "bestTrophies": 4150
         },
         "previousSeason": {
@@ -47,7 +47,7 @@
             "name": "YearsPlayed",
             "level": 9,
             "maxLevel": 9,
-            "progress": 3495,
+            "progress": 3496,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/3TeHoCb_VUTGDRtC3j5H-wn6e_ROJ1rhOe5w-fZzqIM.png"
             }
@@ -56,7 +56,7 @@
             "name": "BattleWins",
             "level": 6,
             "maxLevel": 8,
-            "progress": 3416,
+            "progress": 3429,
             "target": 5000,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/Hh18NG8LhvwZrcmtGR8rSKRezmhOxCilxqhroDLBnys.png"
@@ -76,7 +76,7 @@
             "name": "EmoteCollection",
             "level": 1,
             "maxLevel": 8,
-            "progress": 17,
+            "progress": 18,
             "target": 25,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/6f5zy7bLv8sPM6xKJg1qZWLMNbbNYaOTpW3VVl7oXEo.png"
@@ -134,12 +134,12 @@
         },
         {
             "name": "MasteryPrincess",
-            "level": 4,
+            "level": 5,
             "maxLevel": 10,
-            "progress": 4,
-            "target": 5,
+            "progress": 5,
+            "target": 6,
             "iconUrls": {
-                "large": "https://api-assets.clashroyale.com/playerbadges/512/bKuLRi3V-7gL7Gr9ww_NdvY7A3aYVz7oh5p1UVIJmp0.png"
+                "large": "https://api-assets.clashroyale.com/playerbadges/512/sFugU5j6Ukq81jcp9Yo6Df43rQhVorpxfyoIHQ9QwOA.png"
             }
         },
         {
@@ -289,7 +289,7 @@
         {
             "name": "Practice with Friends",
             "stars": 3,
-            "value": 191,
+            "value": 193,
             "target": 10,
             "info": "Win 10 Friendly Battles",
             "completionInfo": null
@@ -690,7 +690,7 @@
             "level": 11,
             "maxLevel": 16,
             "rarity": "common",
-            "count": 3246,
+            "count": 3358,
             "elixirCost": 2,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/X_DQUye_OaS3QN6VC9CPw05Fit7wvSm3XegXIXKP--0.png"
@@ -982,7 +982,7 @@
             "maxLevel": 8,
             "maxEvolutionLevel": 1,
             "rarity": "legendary",
-            "count": 1,
+            "count": 6,
             "elixirCost": 7,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/O2NycChSNhn_UK9nqBXUhhC_lILkiANzPuJjtjoz0CE.png",
@@ -1059,7 +1059,7 @@
             "level": 10,
             "maxLevel": 16,
             "rarity": "common",
-            "count": 3289,
+            "count": 3401,
             "elixirCost": 1,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/16-BqusVvynIgYI8_Jci3LDC-r8AI_xaIYLgXqtlmS8.png"
@@ -1152,7 +1152,7 @@
             "level": 8,
             "maxLevel": 14,
             "rarity": "rare",
-            "count": 296,
+            "count": 319,
             "elixirCost": 9,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/_J2GhbkX3vswaFk1wG-dopwiHyNc_YiPhwroiKF3Mek.png"
@@ -1283,7 +1283,7 @@
             "maxLevel": 14,
             "maxEvolutionLevel": 2,
             "rarity": "rare",
-            "count": 104,
+            "count": 194,
             "elixirCost": 4,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/Fmltc4j3Ve9vO_xhHHPEO3PRP3SmU2oKp2zkZQHRZT4.png",
@@ -1588,7 +1588,7 @@
             "level": 11,
             "maxLevel": 14,
             "rarity": "rare",
-            "count": 277,
+            "count": 300,
             "elixirCost": 6,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/Ie07nQNK9CjhKOa4-arFAewi4EroqaA-86Xo7r5tx94.png"
@@ -1924,7 +1924,7 @@
             "level": 11,
             "maxLevel": 14,
             "rarity": "rare",
-            "count": 277,
+            "count": 300,
             "elixirCost": 6,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/Ie07nQNK9CjhKOa4-arFAewi4EroqaA-86Xo7r5tx94.png"
@@ -1993,7 +1993,7 @@
         "rarity": "rare"
     },
     "starPoints": 72187,
-    "expPoints": 3052,
+    "expPoints": 3152,
     "legacyTrophyRoadHighScore": 4951,
     "currentPathOfLegendSeasonResult": {
         "leagueNumber": 1,
@@ -2039,5 +2039,5 @@
             "bestTrophies": 0
         }
     },
-    "totalExpPoints": 256822
+    "totalExpPoints": 256922
 }
