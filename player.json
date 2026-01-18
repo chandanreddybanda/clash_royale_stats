@@ -2,12 +2,12 @@
     "tag": "#C92LJPYG",
     "name": "\u00e7h\u00e3\u00f1d\u00e5\u00f1",
     "expLevel": 44,
-    "trophies": 9467,
-    "bestTrophies": 9467,
-    "wins": 3443,
-    "losses": 2860,
-    "battleCount": 6303,
-    "threeCrownWins": 1035,
+    "trophies": 9502,
+    "bestTrophies": 9502,
+    "wins": 3450,
+    "losses": 2866,
+    "battleCount": 6316,
+    "threeCrownWins": 1036,
     "challengeCardsWon": 5014,
     "challengeMaxWins": 11,
     "tournamentCardsWon": 213,
@@ -24,13 +24,13 @@
         "badgeId": 16000002
     },
     "arena": {
-        "id": 54000020,
-        "name": "Valkalla",
-        "rawName": "Arena_L9"
+        "id": 54000031,
+        "name": "Legendary Arena",
+        "rawName": "Arena_L10"
     },
     "leagueStatistics": {
         "currentSeason": {
-            "trophies": 9467,
+            "trophies": 9502,
             "bestTrophies": 4150
         },
         "previousSeason": {
@@ -56,7 +56,7 @@
             "name": "BattleWins",
             "level": 6,
             "maxLevel": 8,
-            "progress": 3443,
+            "progress": 3450,
             "target": 5000,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/Hh18NG8LhvwZrcmtGR8rSKRezmhOxCilxqhroDLBnys.png"
@@ -96,7 +96,7 @@
             "name": "CollectionLevel",
             "level": 6,
             "maxLevel": 8,
-            "progress": 1127,
+            "progress": 1128,
             "target": 1200,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/qE8qmfIq6d3V2AmzXMiaffhYjhPdwOWd4OZ1EXK-MPg.png"
@@ -233,7 +233,7 @@
         {
             "name": "Road to Glory",
             "stars": 3,
-            "value": 23,
+            "value": 24,
             "target": 6,
             "info": "Reach Arena 6",
             "completionInfo": null
@@ -1217,7 +1217,7 @@
             "level": 5,
             "maxLevel": 11,
             "rarity": "epic",
-            "count": 28,
+            "count": 34,
             "elixirCost": 3,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/1ArKfLJxYo6_NU_S9cAeIrfbXqWH0oULVJXedxBXQlU.png"
@@ -1311,7 +1311,7 @@
             "maxLevel": 14,
             "maxEvolutionLevel": 1,
             "rarity": "rare",
-            "count": 502,
+            "count": 518,
             "elixirCost": 5,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/ASSQJG_MoVq9e81HZzo4bynMnyLNpNJMfSLb3hqydOw.png",
@@ -1469,7 +1469,7 @@
             "level": 4,
             "maxLevel": 16,
             "rarity": "common",
-            "count": 1283,
+            "count": 1302,
             "elixirCost": 4,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/qPOtg9uONh47_NLxGhhFc_ww9PlZ6z3Ry507q1NZUXs.png"
@@ -1541,11 +1541,11 @@
         {
             "name": "Tornado",
             "id": 28000012,
-            "level": 8,
+            "level": 9,
             "starLevel": 1,
             "maxLevel": 11,
             "rarity": "epic",
-            "count": 35,
+            "count": 0,
             "elixirCost": 3,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/QJB-QK1QJHdw4hjpAwVSyZBozc2ZWAR9pQ-SMUyKaT0.png"
@@ -1674,7 +1674,7 @@
             "level": 7,
             "maxLevel": 14,
             "rarity": "rare",
-            "count": 105,
+            "count": 123,
             "elixirCost": 4,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/KVVOgdn40xasFLYuQv8Go_U_LCV7wSG9q9eE1H7f3Qk.png"
@@ -1686,7 +1686,7 @@
             "level": 1,
             "maxLevel": 14,
             "rarity": "rare",
-            "count": 209,
+            "count": 218,
             "elixirCost": 2,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/vqTzGAjseQv9F5rf4tsFWeocvg0dyPw1j_nB1cmDZfI.png"
@@ -1698,7 +1698,7 @@
             "level": 1,
             "maxLevel": 16,
             "rarity": "common",
-            "count": 541,
+            "count": 728,
             "elixirCost": 2,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/NA6W8S1JBYBlOPwD3dNvJLFvVDKq-UuBs_J3i3ewLFI.png"
@@ -1734,7 +1734,7 @@
             "level": 3,
             "maxLevel": 11,
             "rarity": "epic",
-            "count": 9,
+            "count": 10,
             "elixirCost": 3,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/V5sJlPuo2WBRtirJ1lGEPJA4NvQ0KPwFeMrpxLX5z_8.png"
@@ -1864,11 +1864,11 @@
         {
             "name": "Tornado",
             "id": 28000012,
-            "level": 8,
+            "level": 9,
             "starLevel": 1,
             "maxLevel": 11,
             "rarity": "epic",
-            "count": 35,
+            "count": 0,
             "elixirCost": 3,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/QJB-QK1QJHdw4hjpAwVSyZBozc2ZWAR9pQ-SMUyKaT0.png"
@@ -1992,8 +1992,8 @@
         },
         "rarity": "rare"
     },
-    "starPoints": 72187,
-    "expPoints": 3252,
+    "starPoints": 74187,
+    "expPoints": 5252,
     "legacyTrophyRoadHighScore": 4951,
     "currentPathOfLegendSeasonResult": {
         "leagueNumber": 1,
@@ -2039,5 +2039,5 @@
             "bestTrophies": 0
         }
     },
-    "totalExpPoints": 257022
+    "totalExpPoints": 259022
 }
