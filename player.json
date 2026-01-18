@@ -2,11 +2,11 @@
     "tag": "#C92LJPYG",
     "name": "\u00e7h\u00e3\u00f1d\u00e5\u00f1",
     "expLevel": 44,
-    "trophies": 9404,
-    "bestTrophies": 9438,
-    "wins": 3441,
+    "trophies": 9467,
+    "bestTrophies": 9467,
+    "wins": 3443,
     "losses": 2860,
-    "battleCount": 6301,
+    "battleCount": 6303,
     "threeCrownWins": 1035,
     "challengeCardsWon": 5014,
     "challengeMaxWins": 11,
@@ -30,7 +30,7 @@
     },
     "leagueStatistics": {
         "currentSeason": {
-            "trophies": 9404,
+            "trophies": 9467,
             "bestTrophies": 4150
         },
         "previousSeason": {
@@ -56,7 +56,7 @@
             "name": "BattleWins",
             "level": 6,
             "maxLevel": 8,
-            "progress": 3441,
+            "progress": 3443,
             "target": 5000,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/Hh18NG8LhvwZrcmtGR8rSKRezmhOxCilxqhroDLBnys.png"
@@ -1983,12 +1983,12 @@
         }
     ],
     "currentFavouriteCard": {
-        "name": "Rocket",
-        "id": 28000003,
+        "name": "Inferno Tower",
+        "id": 27000003,
         "maxLevel": 14,
-        "elixirCost": 6,
+        "elixirCost": 5,
         "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/Ie07nQNK9CjhKOa4-arFAewi4EroqaA-86Xo7r5tx94.png"
+            "medium": "https://api-assets.clashroyale.com/cards/300/GSHY_wrooMMLET6bG_WJB8redtwx66c4i80ipi4gYOM.png"
         },
         "rarity": "rare"
     },
