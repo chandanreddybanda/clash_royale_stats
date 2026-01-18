@@ -2,11 +2,11 @@
     "tag": "#C92LJPYG",
     "name": "\u00e7h\u00e3\u00f1d\u00e5\u00f1",
     "expLevel": 44,
-    "trophies": 9286,
-    "bestTrophies": 9341,
-    "wins": 3433,
+    "trophies": 9408,
+    "bestTrophies": 9408,
+    "wins": 3437,
     "losses": 2856,
-    "battleCount": 6289,
+    "battleCount": 6293,
     "threeCrownWins": 1035,
     "challengeCardsWon": 5014,
     "challengeMaxWins": 11,
@@ -30,7 +30,7 @@
     },
     "leagueStatistics": {
         "currentSeason": {
-            "trophies": 9286,
+            "trophies": 9408,
             "bestTrophies": 4150
         },
         "previousSeason": {
@@ -56,7 +56,7 @@
             "name": "BattleWins",
             "level": 6,
             "maxLevel": 8,
-            "progress": 3433,
+            "progress": 3437,
             "target": 5000,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/Hh18NG8LhvwZrcmtGR8rSKRezmhOxCilxqhroDLBnys.png"
@@ -640,7 +640,7 @@
             "level": 10,
             "maxLevel": 16,
             "rarity": "common",
-            "count": 2780,
+            "count": 3097,
             "elixirCost": 5,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/KV48DfwVHKx9XCjzBdk3daT_Eb52Me4VgjVO7WctRc4.png"
@@ -1059,7 +1059,7 @@
             "level": 10,
             "maxLevel": 16,
             "rarity": "common",
-            "count": 3401,
+            "count": 3523,
             "elixirCost": 1,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/16-BqusVvynIgYI8_Jci3LDC-r8AI_xaIYLgXqtlmS8.png"
@@ -1086,7 +1086,7 @@
             "maxLevel": 14,
             "maxEvolutionLevel": 3,
             "rarity": "rare",
-            "count": 51,
+            "count": 74,
             "elixirCost": 5,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/Mej7vnv4H_3p_8qPs_N6_GKahy6HDr7pU7i9eTHS84U.png",
@@ -1139,7 +1139,7 @@
             "maxLevel": 11,
             "maxEvolutionLevel": 1,
             "rarity": "epic",
-            "count": 15,
+            "count": 19,
             "elixirCost": 4,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/cjC9n4AvEZJ3urkVh-rwBkJ-aRSsydIMqSAV48hAih0.png",
@@ -1431,7 +1431,7 @@
             "level": 1,
             "maxLevel": 14,
             "rarity": "rare",
-            "count": 360,
+            "count": 426,
             "elixirCost": 3,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/puhMsZjCIqy21HW3hYxjrk_xt8NIPyFqjRy-BeLKZwo.png"
@@ -1722,7 +1722,7 @@
             "level": 2,
             "maxLevel": 11,
             "rarity": "epic",
-            "count": 3,
+            "count": 14,
             "elixirCost": 4,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/UogMnGHQXT-TOVXRxslKdAKXUPhqUvrD_hV9x8lbzdE.png"
@@ -1983,14 +1983,14 @@
         }
     ],
     "currentFavouriteCard": {
-        "name": "Princess",
-        "id": 26000026,
-        "maxLevel": 8,
-        "elixirCost": 3,
+        "name": "Inferno Tower",
+        "id": 27000003,
+        "maxLevel": 14,
+        "elixirCost": 5,
         "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/bAwMcqp9EKVIKH3ZLm_m0MqZFSG72zG-vKxpx8aKoVs.png"
+            "medium": "https://api-assets.clashroyale.com/cards/300/GSHY_wrooMMLET6bG_WJB8redtwx66c4i80ipi4gYOM.png"
         },
-        "rarity": "legendary"
+        "rarity": "rare"
     },
     "starPoints": 72187,
     "expPoints": 3252,
