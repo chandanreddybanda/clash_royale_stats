@@ -2,11 +2,11 @@
     "tag": "#C92LJPYG",
     "name": "\u00e7h\u00e3\u00f1d\u00e5\u00f1",
     "expLevel": 44,
-    "trophies": 9592,
-    "bestTrophies": 9592,
-    "wins": 3454,
+    "trophies": 9652,
+    "bestTrophies": 9652,
+    "wins": 3456,
     "losses": 2867,
-    "battleCount": 6321,
+    "battleCount": 6323,
     "threeCrownWins": 1037,
     "challengeCardsWon": 5014,
     "challengeMaxWins": 11,
@@ -30,7 +30,7 @@
     },
     "leagueStatistics": {
         "currentSeason": {
-            "trophies": 9592,
+            "trophies": 9652,
             "bestTrophies": 4150
         },
         "previousSeason": {
@@ -56,7 +56,7 @@
             "name": "BattleWins",
             "level": 6,
             "maxLevel": 8,
-            "progress": 3454,
+            "progress": 3456,
             "target": 5000,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/Hh18NG8LhvwZrcmtGR8rSKRezmhOxCilxqhroDLBnys.png"
@@ -775,7 +775,7 @@
             "maxLevel": 14,
             "maxEvolutionLevel": 1,
             "rarity": "rare",
-            "count": 310,
+            "count": 333,
             "elixirCost": 4,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/0lIoYf3Y_plFTzo95zZL93JVxpfb3MMgFDDhgSDGU9A.png",
@@ -1176,7 +1176,7 @@
             "maxLevel": 11,
             "maxEvolutionLevel": 1,
             "rarity": "epic",
-            "count": 22,
+            "count": 33,
             "elixirCost": 5,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/9XL5BP2mqzV8kza6KF8rOxrpCZTyuGLp2l413DTjEoM.png",
