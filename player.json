@@ -2,11 +2,11 @@
     "tag": "#C92LJPYG",
     "name": "\u00e7h\u00e3\u00f1d\u00e5\u00f1",
     "expLevel": 44,
-    "trophies": 9563,
-    "bestTrophies": 9563,
-    "wins": 3453,
+    "trophies": 9592,
+    "bestTrophies": 9592,
+    "wins": 3454,
     "losses": 2866,
-    "battleCount": 6319,
+    "battleCount": 6320,
     "threeCrownWins": 1037,
     "challengeCardsWon": 5014,
     "challengeMaxWins": 11,
@@ -30,7 +30,7 @@
     },
     "leagueStatistics": {
         "currentSeason": {
-            "trophies": 9563,
+            "trophies": 9592,
             "bestTrophies": 4150
         },
         "previousSeason": {
@@ -56,7 +56,7 @@
             "name": "BattleWins",
             "level": 6,
             "maxLevel": 8,
-            "progress": 3453,
+            "progress": 3454,
             "target": 5000,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/Hh18NG8LhvwZrcmtGR8rSKRezmhOxCilxqhroDLBnys.png"
@@ -762,7 +762,7 @@
             "level": 8,
             "maxLevel": 14,
             "rarity": "rare",
-            "count": 370,
+            "count": 393,
             "elixirCost": 4,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/rirYRyHPc97emRjoH-c1O8uZCBzPVnToaGuNGusF3TQ.png"
@@ -790,7 +790,7 @@
             "maxLevel": 16,
             "maxEvolutionLevel": 1,
             "rarity": "common",
-            "count": 3337,
+            "count": 3787,
             "elixirCost": 5,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/TvJsuu2S4yhyk1jVYUAQwdKOnW4U77KuWWOTPOWnwfI.png",
@@ -1189,7 +1189,7 @@
             "level": 9,
             "maxLevel": 14,
             "rarity": "rare",
-            "count": 320,
+            "count": 343,
             "elixirCost": 4,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/l8ZdzzNLcwB4u7ihGgxNFQOjCT_njFuAhZr7D6PRF7E.png"
@@ -1872,30 +1872,16 @@
     ],
     "currentDeck": [
         {
-            "name": "Princess",
-            "id": 26000026,
-            "level": 5,
+            "name": "Tornado",
+            "id": 28000012,
+            "level": 9,
             "starLevel": 1,
-            "maxLevel": 8,
-            "rarity": "legendary",
-            "count": 3,
+            "maxLevel": 11,
+            "rarity": "epic",
+            "count": 0,
             "elixirCost": 3,
             "iconUrls": {
-                "medium": "https://api-assets.clashroyale.com/cards/300/bAwMcqp9EKVIKH3ZLm_m0MqZFSG72zG-vKxpx8aKoVs.png"
-            }
-        },
-        {
-            "name": "Ice Spirit",
-            "id": 26000030,
-            "level": 12,
-            "maxLevel": 16,
-            "maxEvolutionLevel": 1,
-            "rarity": "common",
-            "count": 1541,
-            "elixirCost": 1,
-            "iconUrls": {
-                "medium": "https://api-assets.clashroyale.com/cards/300/lv1budiafU9XmSdrDkk0NYyqASAFYyZ06CPysXKZXlA.png",
-                "evolutionMedium": "https://api-assets.clashroyale.com/cardevolutions/300/lv1budiafU9XmSdrDkk0NYyqASAFYyZ06CPysXKZXlA.png"
+                "medium": "https://api-assets.clashroyale.com/cards/300/QJB-QK1QJHdw4hjpAwVSyZBozc2ZWAR9pQ-SMUyKaT0.png"
             }
         },
         {
@@ -1914,30 +1900,44 @@
             }
         },
         {
-            "name": "Executioner",
-            "id": 26000045,
-            "level": 7,
-            "starLevel": 1,
-            "maxLevel": 11,
-            "maxEvolutionLevel": 1,
-            "rarity": "epic",
-            "count": 22,
-            "elixirCost": 5,
+            "name": "Knight",
+            "id": 26000000,
+            "level": 14,
+            "starLevel": 2,
+            "maxLevel": 16,
+            "maxEvolutionLevel": 3,
+            "rarity": "common",
+            "count": 2005,
+            "elixirCost": 3,
             "iconUrls": {
-                "medium": "https://api-assets.clashroyale.com/cards/300/9XL5BP2mqzV8kza6KF8rOxrpCZTyuGLp2l413DTjEoM.png",
-                "evolutionMedium": "https://api-assets.clashroyale.com/cardevolutions/300/9XL5BP2mqzV8kza6KF8rOxrpCZTyuGLp2l413DTjEoM.png"
+                "medium": "https://api-assets.clashroyale.com/cards/300/jAj1Q5rclXxU9kVImGqSJxa4wEMfEhvwNQ_4jiGUuqg.png",
+                "heroMedium": "https://api-assets.clashroyale.com/cardheroes/300/jAj1Q5rclXxU9kVImGqSJxa4wEMfEhvwNQ_4jiGUuqg.png",
+                "evolutionMedium": "https://api-assets.clashroyale.com/cardevolutions/300/jAj1Q5rclXxU9kVImGqSJxa4wEMfEhvwNQ_4jiGUuqg.png"
             }
         },
         {
-            "name": "Fireball",
-            "id": 28000000,
-            "level": 9,
+            "name": "Princess",
+            "id": 26000026,
+            "level": 5,
+            "starLevel": 1,
+            "maxLevel": 8,
+            "rarity": "legendary",
+            "count": 3,
+            "elixirCost": 3,
+            "iconUrls": {
+                "medium": "https://api-assets.clashroyale.com/cards/300/bAwMcqp9EKVIKH3ZLm_m0MqZFSG72zG-vKxpx8aKoVs.png"
+            }
+        },
+        {
+            "name": "Rocket",
+            "id": 28000003,
+            "level": 11,
             "maxLevel": 14,
             "rarity": "rare",
-            "count": 332,
-            "elixirCost": 4,
+            "count": 300,
+            "elixirCost": 6,
             "iconUrls": {
-                "medium": "https://api-assets.clashroyale.com/cards/300/lZD9MILQv7O-P3XBr_xOLS5idwuz3_7Ws9G60U36yhc.png"
+                "medium": "https://api-assets.clashroyale.com/cards/300/Ie07nQNK9CjhKOa4-arFAewi4EroqaA-86Xo7r5tx94.png"
             }
         },
         {
@@ -1967,16 +1967,15 @@
             }
         },
         {
-            "name": "Tornado",
-            "id": 28000012,
-            "level": 9,
-            "starLevel": 1,
-            "maxLevel": 11,
-            "rarity": "epic",
-            "count": 0,
-            "elixirCost": 3,
+            "name": "Inferno Tower",
+            "id": 27000003,
+            "level": 12,
+            "maxLevel": 14,
+            "rarity": "rare",
+            "count": 510,
+            "elixirCost": 5,
             "iconUrls": {
-                "medium": "https://api-assets.clashroyale.com/cards/300/QJB-QK1QJHdw4hjpAwVSyZBozc2ZWAR9pQ-SMUyKaT0.png"
+                "medium": "https://api-assets.clashroyale.com/cards/300/GSHY_wrooMMLET6bG_WJB8redtwx66c4i80ipi4gYOM.png"
             }
         }
     ],
