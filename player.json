@@ -47,7 +47,7 @@
             "name": "YearsPlayed",
             "level": 9,
             "maxLevel": 9,
-            "progress": 3499,
+            "progress": 3500,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/3TeHoCb_VUTGDRtC3j5H-wn6e_ROJ1rhOe5w-fZzqIM.png"
             }
@@ -460,7 +460,7 @@
             "maxLevel": 16,
             "maxEvolutionLevel": 1,
             "rarity": "common",
-            "count": 3994,
+            "count": 3744,
             "elixirCost": 1,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/oO7iKMU5m0cdxhYPZA3nWQiAUh2yoGgdThLWB1rVSec.png",
@@ -840,7 +840,7 @@
             "maxLevel": 16,
             "maxEvolutionLevel": 1,
             "rarity": "common",
-            "count": 4147,
+            "count": 3897,
             "elixirCost": 4,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/OiwnGrxFMNiHetYEerE-UZt0L_uYNzFY7qV_CA_OxR4.png",
@@ -1069,7 +1069,7 @@
             "level": 10,
             "maxLevel": 16,
             "rarity": "common",
-            "count": 3273,
+            "count": 3023,
             "elixirCost": 1,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/16-BqusVvynIgYI8_Jci3LDC-r8AI_xaIYLgXqtlmS8.png"
@@ -1293,7 +1293,7 @@
             "maxLevel": 14,
             "maxEvolutionLevel": 2,
             "rarity": "rare",
-            "count": 201,
+            "count": 226,
             "elixirCost": 4,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/Fmltc4j3Ve9vO_xhHHPEO3PRP3SmU2oKp2zkZQHRZT4.png",
@@ -1584,7 +1584,7 @@
             "maxLevel": 16,
             "maxEvolutionLevel": 3,
             "rarity": "common",
-            "count": 2005,
+            "count": 2255,
             "elixirCost": 3,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/jAj1Q5rclXxU9kVImGqSJxa4wEMfEhvwNQ_4jiGUuqg.png",
@@ -1611,7 +1611,7 @@
             "starLevel": 3,
             "maxLevel": 16,
             "rarity": "common",
-            "count": 768,
+            "count": 1268,
             "elixirCost": 3,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/NHflxzVAQT4oAz7eDfdueqpictb5vrWezn1nuqFhE4w.png"
@@ -1956,11 +1956,11 @@
         {
             "name": "The Log",
             "id": 28000011,
-            "level": 4,
+            "level": 5,
             "starLevel": 1,
             "maxLevel": 8,
             "rarity": "legendary",
-            "count": 4,
+            "count": 0,
             "elixirCost": 2,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/_iDwuDLexHPFZ_x4_a0eP-rxCS6vwWgTs6DLauwwoaY.png"
