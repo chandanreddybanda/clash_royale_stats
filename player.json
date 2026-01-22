@@ -2,11 +2,11 @@
     "tag": "#C92LJPYG",
     "name": "\u00e7h\u00e3\u00f1d\u00e5\u00f1",
     "expLevel": 46,
-    "trophies": 9653,
+    "trophies": 9625,
     "bestTrophies": 9803,
     "wins": 3473,
-    "losses": 2884,
-    "battleCount": 6357,
+    "losses": 2885,
+    "battleCount": 6358,
     "threeCrownWins": 1039,
     "challengeCardsWon": 5014,
     "challengeMaxWins": 11,
@@ -30,7 +30,7 @@
     },
     "leagueStatistics": {
         "currentSeason": {
-            "trophies": 9653,
+            "trophies": 9625,
             "bestTrophies": 4150
         },
         "previousSeason": {
@@ -47,7 +47,7 @@
             "name": "YearsPlayed",
             "level": 9,
             "maxLevel": 9,
-            "progress": 3501,
+            "progress": 3502,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/3TeHoCb_VUTGDRtC3j5H-wn6e_ROJ1rhOe5w-fZzqIM.png"
             }
@@ -499,7 +499,7 @@
             "level": 5,
             "maxLevel": 11,
             "rarity": "epic",
-            "count": 47,
+            "count": 49,
             "elixirCost": 2,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/bGP21OOmcpHMJ5ZA79bHVV2D-NzPtDkvBskCNJb7pg0.png"
@@ -525,7 +525,7 @@
             "level": 8,
             "maxLevel": 14,
             "rarity": "rare",
-            "count": 140,
+            "count": 154,
             "elixirCost": 4,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/Ubu0oUl8tZkusnkZf8Xv9Vno5IO29Y-jbZ4fhoNJ5oc.png"
@@ -602,7 +602,7 @@
             "level": 11,
             "maxLevel": 16,
             "rarity": "common",
-            "count": 4276,
+            "count": 4097,
             "elixirCost": 3,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/yHGpoEnmUWPGV_hBbhn-Kk-Bs838OjGzWzJJlQpQKQA.png"
@@ -1135,7 +1135,7 @@
             "maxLevel": 16,
             "maxEvolutionLevel": 1,
             "rarity": "common",
-            "count": 2495,
+            "count": 2245,
             "elixirCost": 3,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/nZK1y-beLxO5vnlyUhK6-2zH2NzXJwqykcosqQ1cmZ8.png",
@@ -1441,7 +1441,7 @@
             "level": 1,
             "maxLevel": 14,
             "rarity": "rare",
-            "count": 426,
+            "count": 432,
             "elixirCost": 3,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/puhMsZjCIqy21HW3hYxjrk_xt8NIPyFqjRy-BeLKZwo.png"
@@ -1584,7 +1584,7 @@
             "maxLevel": 16,
             "maxEvolutionLevel": 3,
             "rarity": "common",
-            "count": 2255,
+            "count": 2755,
             "elixirCost": 3,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/jAj1Q5rclXxU9kVImGqSJxa4wEMfEhvwNQ_4jiGUuqg.png",
@@ -1907,7 +1907,7 @@
             "maxLevel": 16,
             "maxEvolutionLevel": 3,
             "rarity": "common",
-            "count": 2255,
+            "count": 2755,
             "elixirCost": 3,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/jAj1Q5rclXxU9kVImGqSJxa4wEMfEhvwNQ_4jiGUuqg.png",
@@ -1922,7 +1922,7 @@
             "starLevel": 1,
             "maxLevel": 8,
             "rarity": "legendary",
-            "count": 3,
+            "count": 6,
             "elixirCost": 3,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/bAwMcqp9EKVIKH3ZLm_m0MqZFSG72zG-vKxpx8aKoVs.png"
@@ -1993,14 +1993,14 @@
         }
     ],
     "currentFavouriteCard": {
-        "name": "Rocket",
-        "id": 28000003,
-        "maxLevel": 14,
-        "elixirCost": 6,
+        "name": "Goblin Gang",
+        "id": 26000041,
+        "maxLevel": 16,
+        "elixirCost": 3,
         "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/Ie07nQNK9CjhKOa4-arFAewi4EroqaA-86Xo7r5tx94.png"
+            "medium": "https://api-assets.clashroyale.com/cards/300/NHflxzVAQT4oAz7eDfdueqpictb5vrWezn1nuqFhE4w.png"
         },
-        "rarity": "rare"
+        "rarity": "common"
     },
     "starPoints": 76587,
     "expPoints": 7952,
