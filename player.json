@@ -2,11 +2,11 @@
     "tag": "#C92LJPYG",
     "name": "\u00e7h\u00e3\u00f1d\u00e5\u00f1",
     "expLevel": 46,
-    "trophies": 9625,
+    "trophies": 9628,
     "bestTrophies": 9803,
-    "wins": 3473,
-    "losses": 2885,
-    "battleCount": 6358,
+    "wins": 3474,
+    "losses": 2886,
+    "battleCount": 6360,
     "threeCrownWins": 1039,
     "challengeCardsWon": 5014,
     "challengeMaxWins": 11,
@@ -30,7 +30,7 @@
     },
     "leagueStatistics": {
         "currentSeason": {
-            "trophies": 9625,
+            "trophies": 9628,
             "bestTrophies": 4150
         },
         "previousSeason": {
@@ -56,7 +56,7 @@
             "name": "BattleWins",
             "level": 6,
             "maxLevel": 8,
-            "progress": 3473,
+            "progress": 3474,
             "target": 5000,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/Hh18NG8LhvwZrcmtGR8rSKRezmhOxCilxqhroDLBnys.png"
@@ -84,19 +84,19 @@
         },
         {
             "name": "BannerCollection",
-            "level": 1,
+            "level": 2,
             "maxLevel": 8,
-            "progress": 29,
-            "target": 30,
+            "progress": 30,
+            "target": 50,
             "iconUrls": {
-                "large": "https://api-assets.clashroyale.com/playerbadges/512/Lzu_2_YeM2OMFLCm-K6XX3mXjjYcrpBQ095pV3BX_ww.png"
+                "large": "https://api-assets.clashroyale.com/playerbadges/512/8jW2bVK_9lfhrDs2K_LcpYhixWipmy3_BWh7Q_-Fxgo.png"
             }
         },
         {
             "name": "CollectionLevel",
             "level": 6,
             "maxLevel": 8,
-            "progress": 1131,
+            "progress": 1142,
             "target": 1200,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/qE8qmfIq6d3V2AmzXMiaffhYjhPdwOWd4OZ1EXK-MPg.png"
@@ -174,12 +174,12 @@
         },
         {
             "name": "MasteryKnight",
-            "level": 6,
+            "level": 7,
             "maxLevel": 10,
-            "progress": 6,
-            "target": 7,
+            "progress": 7,
+            "target": 8,
             "iconUrls": {
-                "large": "https://api-assets.clashroyale.com/playerbadges/512/X1Uhv_ft6HIuSTb41nzUXfRpcpoLyt2cMUo01Q2S35w.png"
+                "large": "https://api-assets.clashroyale.com/playerbadges/512/0Qs-ELSO2B52EZH3cnjbGoTZ2njdUW5eDj5R9vQTxy4.png"
             }
         },
         {
@@ -251,7 +251,7 @@
         {
             "name": "Gatherer",
             "stars": 3,
-            "value": 118,
+            "value": 119,
             "target": 40,
             "info": "Collect 40 cards",
             "completionInfo": null
@@ -1122,7 +1122,7 @@
             "level": 3,
             "maxLevel": 14,
             "rarity": "rare",
-            "count": 792,
+            "count": 882,
             "elixirCost": 4,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/hzKNE3QwFcrSrDDRuVW3QY_OnrDPijSiIp-PsWgFevE.png"
@@ -1833,6 +1833,18 @@
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/2onG4t4-CxqwFVZAn6zpWxFz3_mG2ksSj4Q7zldo1SM.png"
             }
+        },
+        {
+            "name": "Archer Queen",
+            "id": 26000072,
+            "level": 1,
+            "maxLevel": 6,
+            "rarity": "champion",
+            "count": 1,
+            "elixirCost": 5,
+            "iconUrls": {
+                "medium": "https://api-assets.clashroyale.com/cards/300/p7OQmOAFTery7zCzlpDdm-LOD1kINTm42AwIHchZfWk.png"
+            }
         }
     ],
     "supportCards": [
@@ -2003,7 +2015,7 @@
         "rarity": "common"
     },
     "starPoints": 76587,
-    "expPoints": 7952,
+    "expPoints": 8052,
     "legacyTrophyRoadHighScore": 4951,
     "currentPathOfLegendSeasonResult": {
         "leagueNumber": 1,
@@ -2049,5 +2061,5 @@
             "bestTrophies": 0
         }
     },
-    "totalExpPoints": 311722
+    "totalExpPoints": 311822
 }
