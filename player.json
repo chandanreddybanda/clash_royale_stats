@@ -2,11 +2,11 @@
     "tag": "#C92LJPYG",
     "name": "\u00e7h\u00e3\u00f1d\u00e5\u00f1",
     "expLevel": 46,
-    "trophies": 9837,
+    "trophies": 9808,
     "bestTrophies": 9927,
     "wins": 3500,
-    "losses": 2906,
-    "battleCount": 6406,
+    "losses": 2907,
+    "battleCount": 6407,
     "threeCrownWins": 1044,
     "challengeCardsWon": 5014,
     "challengeMaxWins": 11,
@@ -30,7 +30,7 @@
     },
     "leagueStatistics": {
         "currentSeason": {
-            "trophies": 9837,
+            "trophies": 9808,
             "bestTrophies": 4150
         },
         "previousSeason": {
@@ -2005,12 +2005,12 @@
         }
     ],
     "currentFavouriteCard": {
-        "name": "Inferno Tower",
-        "id": 27000003,
+        "name": "Rocket",
+        "id": 28000003,
         "maxLevel": 14,
-        "elixirCost": 5,
+        "elixirCost": 6,
         "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/GSHY_wrooMMLET6bG_WJB8redtwx66c4i80ipi4gYOM.png"
+            "medium": "https://api-assets.clashroyale.com/cards/300/Ie07nQNK9CjhKOa4-arFAewi4EroqaA-86Xo7r5tx94.png"
         },
         "rarity": "rare"
     },
