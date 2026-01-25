@@ -4,9 +4,9 @@
     "expLevel": 46,
     "trophies": 9808,
     "bestTrophies": 9927,
-    "wins": 3500,
-    "losses": 2907,
-    "battleCount": 6407,
+    "wins": 3501,
+    "losses": 2908,
+    "battleCount": 6409,
     "threeCrownWins": 1044,
     "challengeCardsWon": 5014,
     "challengeMaxWins": 11,
@@ -56,7 +56,7 @@
             "name": "BattleWins",
             "level": 6,
             "maxLevel": 8,
-            "progress": 3500,
+            "progress": 3501,
             "target": 5000,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/Hh18NG8LhvwZrcmtGR8rSKRezmhOxCilxqhroDLBnys.png"
@@ -96,7 +96,7 @@
             "name": "CollectionLevel",
             "level": 6,
             "maxLevel": 8,
-            "progress": 1142,
+            "progress": 1143,
             "target": 1200,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/qE8qmfIq6d3V2AmzXMiaffhYjhPdwOWd4OZ1EXK-MPg.png"
@@ -194,12 +194,12 @@
         },
         {
             "name": "MasteryRocket",
-            "level": 5,
+            "level": 6,
             "maxLevel": 10,
-            "progress": 5,
-            "target": 6,
+            "progress": 6,
+            "target": 7,
             "iconUrls": {
-                "large": "https://api-assets.clashroyale.com/playerbadges/512/OOrFC5ytiJkpbxeOwfNBaDy2-WLppvkLp4XiOLhTjUo.png"
+                "large": "https://api-assets.clashroyale.com/playerbadges/512/q_pWLSdJwQl5hB-RyY8QNrze3hAjK238l8MlR6TJiz4.png"
             }
         },
         {
@@ -1335,7 +1335,7 @@
             "maxLevel": 16,
             "maxEvolutionLevel": 1,
             "rarity": "common",
-            "count": 1967,
+            "count": 3767,
             "elixirCost": 7,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/jcNyYGUiXXNz3kuz8NBkHNKNREQKraXlb_Ts7rhCIdM.png",
@@ -1595,10 +1595,10 @@
         {
             "name": "Rocket",
             "id": 28000003,
-            "level": 11,
+            "level": 12,
             "maxLevel": 14,
             "rarity": "rare",
-            "count": 693,
+            "count": 0,
             "elixirCost": 6,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/Ie07nQNK9CjhKOa4-arFAewi4EroqaA-86Xo7r5tx94.png"
@@ -2005,17 +2005,17 @@
         }
     ],
     "currentFavouriteCard": {
-        "name": "Rocket",
-        "id": 28000003,
-        "maxLevel": 14,
-        "elixirCost": 6,
+        "name": "Princess",
+        "id": 26000026,
+        "maxLevel": 8,
+        "elixirCost": 3,
         "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/Ie07nQNK9CjhKOa4-arFAewi4EroqaA-86Xo7r5tx94.png"
+            "medium": "https://api-assets.clashroyale.com/cards/300/bAwMcqp9EKVIKH3ZLm_m0MqZFSG72zG-vKxpx8aKoVs.png"
         },
-        "rarity": "rare"
+        "rarity": "legendary"
     },
-    "starPoints": 76587,
-    "expPoints": 8302,
+    "starPoints": 78587,
+    "expPoints": 10427,
     "legacyTrophyRoadHighScore": 4951,
     "currentPathOfLegendSeasonResult": {
         "leagueNumber": 1,
@@ -2061,5 +2061,5 @@
             "bestTrophies": 0
         }
     },
-    "totalExpPoints": 312072
+    "totalExpPoints": 314197
 }
