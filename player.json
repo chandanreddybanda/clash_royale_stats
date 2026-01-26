@@ -4,9 +4,9 @@
     "expLevel": 46,
     "trophies": 9748,
     "bestTrophies": 9986,
-    "wins": 3510,
-    "losses": 2919,
-    "battleCount": 6429,
+    "wins": 3512,
+    "losses": 2921,
+    "battleCount": 6433,
     "threeCrownWins": 1044,
     "challengeCardsWon": 5014,
     "challengeMaxWins": 11,
@@ -56,7 +56,7 @@
             "name": "BattleWins",
             "level": 6,
             "maxLevel": 8,
-            "progress": 3510,
+            "progress": 3512,
             "target": 5000,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/Hh18NG8LhvwZrcmtGR8rSKRezmhOxCilxqhroDLBnys.png"
@@ -220,6 +220,16 @@
             "target": 2,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/Je3BgHzDJqD93GtrHDoI1whoC1vl0Lz2CM7sn30P9nc.png"
+            }
+        },
+        {
+            "name": "MegaDraftLeagueBadge",
+            "level": 1,
+            "maxLevel": 2,
+            "progress": 1,
+            "target": 2,
+            "iconUrls": {
+                "large": "https://api-assets.clashroyale.com/playerbadges/512/x1u3By8TtUDARps9Bp02Az7RTrq7GT1PbmzBjO8HX3o.png"
             }
         }
     ],
@@ -2041,15 +2051,6 @@
             },
             "trophies": 0,
             "bestTrophies": 0
-        },
-        "MegaDraftTrail_202511": {
-            "arena": {
-                "id": 168000082,
-                "name": "Casual",
-                "rawName": "MegaDraftArena1"
-            },
-            "trophies": 1,
-            "bestTrophies": 1
         },
         "AutoChess_2026_Jan": {
             "arena": {
