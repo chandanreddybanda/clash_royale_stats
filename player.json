@@ -2,11 +2,11 @@
     "tag": "#C92LJPYG",
     "name": "\u00e7h\u00e3\u00f1d\u00e5\u00f1",
     "expLevel": 46,
-    "trophies": 9898,
-    "bestTrophies": 9959,
-    "wins": 3507,
-    "losses": 2911,
-    "battleCount": 6418,
+    "trophies": 9748,
+    "bestTrophies": 9986,
+    "wins": 3510,
+    "losses": 2919,
+    "battleCount": 6429,
     "threeCrownWins": 1044,
     "challengeCardsWon": 5014,
     "challengeMaxWins": 11,
@@ -30,7 +30,7 @@
     },
     "leagueStatistics": {
         "currentSeason": {
-            "trophies": 9898,
+            "trophies": 9748,
             "bestTrophies": 4150
         },
         "previousSeason": {
@@ -56,7 +56,7 @@
             "name": "BattleWins",
             "level": 6,
             "maxLevel": 8,
-            "progress": 3507,
+            "progress": 3510,
             "target": 5000,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/Hh18NG8LhvwZrcmtGR8rSKRezmhOxCilxqhroDLBnys.png"
@@ -2005,14 +2005,14 @@
         }
     ],
     "currentFavouriteCard": {
-        "name": "Inferno Tower",
-        "id": 27000003,
-        "maxLevel": 14,
-        "elixirCost": 5,
+        "name": "Goblin Gang",
+        "id": 26000041,
+        "maxLevel": 16,
+        "elixirCost": 3,
         "iconUrls": {
-            "medium": "https://api-assets.clashroyale.com/cards/300/GSHY_wrooMMLET6bG_WJB8redtwx66c4i80ipi4gYOM.png"
+            "medium": "https://api-assets.clashroyale.com/cards/300/NHflxzVAQT4oAz7eDfdueqpictb5vrWezn1nuqFhE4w.png"
         },
-        "rarity": "rare"
+        "rarity": "common"
     },
     "starPoints": 78587,
     "expPoints": 10427,
