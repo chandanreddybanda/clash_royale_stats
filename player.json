@@ -2,11 +2,11 @@
     "tag": "#C92LJPYG",
     "name": "\u00e7h\u00e3\u00f1d\u00e5\u00f1",
     "expLevel": 46,
-    "trophies": 9929,
-    "bestTrophies": 9929,
-    "wins": 3506,
-    "losses": 2909,
-    "battleCount": 6415,
+    "trophies": 9898,
+    "bestTrophies": 9959,
+    "wins": 3507,
+    "losses": 2911,
+    "battleCount": 6418,
     "threeCrownWins": 1044,
     "challengeCardsWon": 5014,
     "challengeMaxWins": 11,
@@ -30,7 +30,7 @@
     },
     "leagueStatistics": {
         "currentSeason": {
-            "trophies": 9929,
+            "trophies": 9898,
             "bestTrophies": 4150
         },
         "previousSeason": {
@@ -56,7 +56,7 @@
             "name": "BattleWins",
             "level": 6,
             "maxLevel": 8,
-            "progress": 3506,
+            "progress": 3507,
             "target": 5000,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/Hh18NG8LhvwZrcmtGR8rSKRezmhOxCilxqhroDLBnys.png"
@@ -512,7 +512,7 @@
             "maxLevel": 11,
             "maxEvolutionLevel": 1,
             "rarity": "epic",
-            "count": 77,
+            "count": 85,
             "elixirCost": 4,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/VNabB1WKnYtYRSG7X_FZfnZjQDHTBs9A96OGMFmecrA.png",
@@ -737,7 +737,7 @@
             "maxLevel": 8,
             "maxEvolutionLevel": 1,
             "rarity": "legendary",
-            "count": 4,
+            "count": 5,
             "elixirCost": 4,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/E6RWrnCuk13xMX5OE1EQtLEKTZQV6B78d00y8PlXt6Q.png",
@@ -1189,7 +1189,7 @@
             "level": 9,
             "maxLevel": 14,
             "rarity": "rare",
-            "count": 707,
+            "count": 775,
             "elixirCost": 4,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/l8ZdzzNLcwB4u7ihGgxNFQOjCT_njFuAhZr7D6PRF7E.png"
@@ -1429,7 +1429,7 @@
             "level": 7,
             "maxLevel": 14,
             "rarity": "rare",
-            "count": 31,
+            "count": 56,
             "elixirCost": 4,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/KdwXcoigS2Kg-cgA7BJJIANbUJG6SNgjetRQ-MegZ08.png"
@@ -1467,7 +1467,7 @@
             "level": 1,
             "maxLevel": 16,
             "rarity": "common",
-            "count": 1860,
+            "count": 2308,
             "elixirCost": 3,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/LPg7AGjGI3_xmi7gLLgGC50yKM1jJ2teWkZfoHJcIZo.png"
@@ -1555,7 +1555,7 @@
             "starLevel": 1,
             "maxLevel": 11,
             "rarity": "epic",
-            "count": 10,
+            "count": 12,
             "elixirCost": 3,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/QJB-QK1QJHdw4hjpAwVSyZBozc2ZWAR9pQ-SMUyKaT0.png"
@@ -1624,7 +1624,7 @@
             "starLevel": 1,
             "maxLevel": 8,
             "rarity": "legendary",
-            "count": 0,
+            "count": 1,
             "elixirCost": 2,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/_iDwuDLexHPFZ_x4_a0eP-rxCS6vwWgTs6DLauwwoaY.png"
@@ -1720,7 +1720,7 @@
             "level": 1,
             "maxLevel": 11,
             "rarity": "epic",
-            "count": 86,
+            "count": 92,
             "elixirCost": 3,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/BykyeWDqzn4PlHSszu3NbrXT1mHxW2EA8vHbQGR5LDE.png"
@@ -1890,7 +1890,7 @@
             "starLevel": 1,
             "maxLevel": 11,
             "rarity": "epic",
-            "count": 10,
+            "count": 12,
             "elixirCost": 3,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/QJB-QK1QJHdw4hjpAwVSyZBozc2ZWAR9pQ-SMUyKaT0.png"
@@ -1972,7 +1972,7 @@
             "starLevel": 1,
             "maxLevel": 8,
             "rarity": "legendary",
-            "count": 0,
+            "count": 1,
             "elixirCost": 2,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/_iDwuDLexHPFZ_x4_a0eP-rxCS6vwWgTs6DLauwwoaY.png"
