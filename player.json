@@ -2,12 +2,12 @@
     "tag": "#C92LJPYG",
     "name": "\u00e7h\u00e3\u00f1d\u00e5\u00f1",
     "expLevel": 52,
-    "trophies": 9808,
+    "trophies": 9838,
     "bestTrophies": 9986,
-    "wins": 3514,
+    "wins": 3515,
     "losses": 2921,
-    "battleCount": 6435,
-    "threeCrownWins": 1044,
+    "battleCount": 6436,
+    "threeCrownWins": 1045,
     "challengeCardsWon": 5014,
     "challengeMaxWins": 11,
     "tournamentCardsWon": 213,
@@ -30,7 +30,7 @@
     },
     "leagueStatistics": {
         "currentSeason": {
-            "trophies": 9808,
+            "trophies": 9838,
             "bestTrophies": 4150
         },
         "previousSeason": {
@@ -56,7 +56,7 @@
             "name": "BattleWins",
             "level": 6,
             "maxLevel": 8,
-            "progress": 3514,
+            "progress": 3515,
             "target": 5000,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/Hh18NG8LhvwZrcmtGR8rSKRezmhOxCilxqhroDLBnys.png"
@@ -86,7 +86,7 @@
             "name": "BannerCollection",
             "level": 2,
             "maxLevel": 8,
-            "progress": 32,
+            "progress": 33,
             "target": 50,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/8jW2bVK_9lfhrDs2K_LcpYhixWipmy3_BWh7Q_-Fxgo.png"
