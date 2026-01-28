@@ -2,11 +2,11 @@
     "tag": "#C92LJPYG",
     "name": "\u00e7h\u00e3\u00f1d\u00e5\u00f1",
     "expLevel": 52,
-    "trophies": 9979,
-    "bestTrophies": 9986,
-    "wins": 3523,
-    "losses": 2924,
-    "battleCount": 6447,
+    "trophies": 10014,
+    "bestTrophies": 10014,
+    "wins": 3525,
+    "losses": 2925,
+    "battleCount": 6450,
     "threeCrownWins": 1045,
     "challengeCardsWon": 5014,
     "challengeMaxWins": 11,
@@ -24,13 +24,13 @@
         "badgeId": 16000002
     },
     "arena": {
-        "id": 54000031,
-        "name": "Legendary Arena",
-        "rawName": "Arena_L10"
+        "id": 54000117,
+        "name": "Lumberlove Cabin",
+        "rawName": "Arena_L11"
     },
     "leagueStatistics": {
         "currentSeason": {
-            "trophies": 9979,
+            "trophies": 10014,
             "bestTrophies": 4150
         },
         "previousSeason": {
@@ -56,7 +56,7 @@
             "name": "BattleWins",
             "level": 6,
             "maxLevel": 8,
-            "progress": 3523,
+            "progress": 3525,
             "target": 5000,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/Hh18NG8LhvwZrcmtGR8rSKRezmhOxCilxqhroDLBnys.png"
@@ -253,7 +253,7 @@
         {
             "name": "Road to Glory",
             "stars": 3,
-            "value": 24,
+            "value": 25,
             "target": 6,
             "info": "Reach Arena 6",
             "completionInfo": null
@@ -1079,7 +1079,7 @@
             "level": 10,
             "maxLevel": 16,
             "rarity": "common",
-            "count": 3051,
+            "count": 3086,
             "elixirCost": 1,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/16-BqusVvynIgYI8_Jci3LDC-r8AI_xaIYLgXqtlmS8.png"
