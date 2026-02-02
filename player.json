@@ -33,10 +33,6 @@
             "trophies": 10014,
             "bestTrophies": 4150
         },
-        "previousSeason": {
-            "id": "2025-12",
-            "trophies": 4184
-        },
         "bestSeason": {
             "id": "2019-11",
             "trophies": 4930
@@ -709,11 +705,13 @@
             "id": 26000002,
             "level": 11,
             "maxLevel": 16,
+            "maxEvolutionLevel": 2,
             "rarity": "common",
             "count": 3365,
             "elixirCost": 2,
             "iconUrls": {
-                "medium": "https://api-assets.clashroyale.com/cards/300/X_DQUye_OaS3QN6VC9CPw05Fit7wvSm3XegXIXKP--0.png"
+                "medium": "https://api-assets.clashroyale.com/cards/300/X_DQUye_OaS3QN6VC9CPw05Fit7wvSm3XegXIXKP--0.png",
+                "heroMedium": "https://api-assets.clashroyale.com/cardheroes/300/X_DQUye_OaS3QN6VC9CPw05Fit7wvSm3XegXIXKP--0.png"
             }
         },
         {
