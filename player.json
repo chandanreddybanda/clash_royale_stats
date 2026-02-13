@@ -25,7 +25,8 @@
     },
     "arena": {
         "id": 54000117,
-        "name": "Lumberlove Cabin"
+        "name": "Lumberlove Cabin",
+        "rawName": "Arena_L11"
     },
     "leagueStatistics": {
         "currentSeason": {
@@ -344,11 +345,13 @@
             "id": 26000039,
             "level": 8,
             "maxLevel": 14,
+            "maxEvolutionLevel": 2,
             "rarity": "rare",
             "count": 641,
             "elixirCost": 3,
             "iconUrls": {
-                "medium": "https://api-assets.clashroyale.com/cards/300/-T_e4YLbuhPBKbYnBwQfXgynNpp5eOIN_0RracYwL9c.png"
+                "medium": "https://api-assets.clashroyale.com/cards/300/-T_e4YLbuhPBKbYnBwQfXgynNpp5eOIN_0RracYwL9c.png",
+                "heroMedium": "https://api-assets.clashroyale.com/cardheroes/300/-T_e4YLbuhPBKbYnBwQfXgynNpp5eOIN_0RracYwL9c.png"
             }
         },
         {
@@ -2043,7 +2046,8 @@
         "": {
             "arena": {
                 "id": 168000050,
-                "name": "Bronze I"
+                "name": "Bronze I",
+                "rawName": "AutoChessArena1_2025_Oct"
             },
             "trophies": 0,
             "bestTrophies": 0
@@ -2051,7 +2055,8 @@
         "AutoChess_2026_Jan": {
             "arena": {
                 "id": 168000094,
-                "name": "Bronze I"
+                "name": "Bronze I",
+                "rawName": "AutoChessArena1_2026_Jan"
             },
             "trophies": 0,
             "bestTrophies": 0
@@ -2059,7 +2064,8 @@
         "AutoChess_2026_Feb": {
             "arena": {
                 "id": 168000106,
-                "name": "Bronze I"
+                "name": "Bronze I",
+                "rawName": "AutoChessArena1_2026_Feb"
             },
             "trophies": 0,
             "bestTrophies": 0
