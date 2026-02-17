@@ -25,7 +25,8 @@
     },
     "arena": {
         "id": 54000117,
-        "name": "Lumberlove Cabin"
+        "name": "Lumberlove Cabin",
+        "rawName": "Arena_L11"
     },
     "leagueStatistics": {
         "currentSeason": {
@@ -42,7 +43,7 @@
             "name": "YearsPlayed",
             "level": 9,
             "maxLevel": 9,
-            "progress": 3527,
+            "progress": 3528,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/3TeHoCb_VUTGDRtC3j5H-wn6e_ROJ1rhOe5w-fZzqIM.png"
             }
@@ -2045,7 +2046,8 @@
         "": {
             "arena": {
                 "id": 168000050,
-                "name": "Bronze I"
+                "name": "Bronze I",
+                "rawName": "AutoChessArena1_2025_Oct"
             },
             "trophies": 0,
             "bestTrophies": 0
@@ -2053,7 +2055,8 @@
         "AutoChess_2026_Jan": {
             "arena": {
                 "id": 168000094,
-                "name": "Bronze I"
+                "name": "Bronze I",
+                "rawName": "AutoChessArena1_2026_Jan"
             },
             "trophies": 0,
             "bestTrophies": 0
@@ -2061,7 +2064,8 @@
         "AutoChess_2026_Feb": {
             "arena": {
                 "id": 168000106,
-                "name": "Bronze I"
+                "name": "Bronze I",
+                "rawName": "AutoChessArena1_2026_Feb"
             },
             "trophies": 0,
             "bestTrophies": 0
