@@ -25,8 +25,7 @@
     },
     "arena": {
         "id": 54000117,
-        "name": "Lumberlove Cabin",
-        "rawName": "Arena_L11"
+        "name": "Lumberlove Cabin"
     },
     "leagueStatistics": {
         "currentSeason": {
@@ -2046,8 +2045,7 @@
         "": {
             "arena": {
                 "id": 168000050,
-                "name": "Bronze I",
-                "rawName": "AutoChessArena1_2025_Oct"
+                "name": "Bronze I"
             },
             "trophies": 0,
             "bestTrophies": 0
@@ -2055,8 +2053,7 @@
         "AutoChess_2026_Jan": {
             "arena": {
                 "id": 168000094,
-                "name": "Bronze I",
-                "rawName": "AutoChessArena1_2026_Jan"
+                "name": "Bronze I"
             },
             "trophies": 0,
             "bestTrophies": 0
@@ -2064,8 +2061,7 @@
         "AutoChess_2026_Feb": {
             "arena": {
                 "id": 168000106,
-                "name": "Bronze I",
-                "rawName": "AutoChessArena1_2026_Feb"
+                "name": "Bronze I"
             },
             "trophies": 0,
             "bestTrophies": 0
