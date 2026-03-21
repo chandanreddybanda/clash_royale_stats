@@ -2057,20 +2057,20 @@
             "trophies": 0,
             "bestTrophies": 0
         },
-        "AutoChess_2026_Jan": {
+        "CrazyArena": {
             "arena": {
-                "id": 168000094,
-                "name": "Bronze I",
-                "rawName": "AutoChessArena1_2026_Jan"
+                "id": 168000131,
+                "name": "Casual",
+                "rawName": "CrazyArena1"
             },
             "trophies": 0,
             "bestTrophies": 0
         },
-        "AutoChess_2026_Feb": {
+        "AutoChess_2026_Mar": {
             "arena": {
-                "id": 168000106,
+                "id": 168000121,
                 "name": "Bronze I",
-                "rawName": "AutoChessArena1_2026_Feb"
+                "rawName": "AutoChessArena1_2026_Mar"
             },
             "trophies": 0,
             "bestTrophies": 0
