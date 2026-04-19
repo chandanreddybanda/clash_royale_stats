@@ -2061,20 +2061,20 @@
             "trophies": 0,
             "bestTrophies": 0
         },
-        "CrazyArena": {
+        "TripleDraftTrail": {
             "arena": {
-                "id": 168000131,
+                "id": 168000143,
                 "name": "Casual",
-                "rawName": "CrazyArena1"
+                "rawName": "TripleDraftArena1"
             },
             "trophies": 0,
             "bestTrophies": 0
         },
-        "AutoChess_2026_Mar": {
+        "AutoChess_2026_Season_8": {
             "arena": {
-                "id": 168000121,
+                "id": 168000133,
                 "name": "Bronze I",
-                "rawName": "AutoChessArena1_2026_Mar"
+                "rawName": "AutoChessArena1_2026_Season_8"
             },
             "trophies": 0,
             "bestTrophies": 0
