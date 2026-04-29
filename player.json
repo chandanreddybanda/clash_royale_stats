@@ -12,6 +12,7 @@
     "challengeMaxWins": 11,
     "tournamentCardsWon": 213,
     "tournamentBattleCount": 389,
+    "currentWinLoseStreak": 0,
     "role": "leader",
     "donations": 0,
     "donationsReceived": 0,
