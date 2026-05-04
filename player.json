@@ -484,11 +484,13 @@
             "id": 26000027,
             "level": 5,
             "maxLevel": 11,
+            "maxEvolutionLevel": 2,
             "rarity": "epic",
             "count": 60,
             "elixirCost": 4,
             "iconUrls": {
-                "medium": "https://api-assets.clashroyale.com/cards/300/M7fXlrKXHu2IvpSGpk36kXVstslbR08Bbxcy0jQcln8.png"
+                "medium": "https://api-assets.clashroyale.com/cards/300/M7fXlrKXHu2IvpSGpk36kXVstslbR08Bbxcy0jQcln8.png",
+                "heroMedium": "https://api-assets.clashroyale.com/cardheroes/300/M7fXlrKXHu2IvpSGpk36kXVstslbR08Bbxcy0jQcln8.png"
             }
         },
         {
@@ -918,11 +920,13 @@
             "id": 26000034,
             "level": 5,
             "maxLevel": 11,
+            "maxEvolutionLevel": 2,
             "rarity": "epic",
             "count": 90,
             "elixirCost": 5,
             "iconUrls": {
-                "medium": "https://api-assets.clashroyale.com/cards/300/SU4qFXmbQXWjvASxVI6z9IJuTYolx4A0MKK90sTIE88.png"
+                "medium": "https://api-assets.clashroyale.com/cards/300/SU4qFXmbQXWjvASxVI6z9IJuTYolx4A0MKK90sTIE88.png",
+                "heroMedium": "https://api-assets.clashroyale.com/cardheroes/300/SU4qFXmbQXWjvASxVI6z9IJuTYolx4A0MKK90sTIE88.png"
             }
         },
         {
