@@ -2,17 +2,17 @@
     "tag": "#C92LJPYG",
     "name": "\u00e7h\u00e3\u00f1d\u00e5\u00f1",
     "expLevel": 52,
-    "trophies": 10014,
+    "trophies": 10000,
     "bestTrophies": 10014,
     "wins": 3525,
-    "losses": 2925,
-    "battleCount": 6450,
+    "losses": 2926,
+    "battleCount": 6451,
     "threeCrownWins": 1045,
     "challengeCardsWon": 5014,
     "challengeMaxWins": 11,
     "tournamentCardsWon": 213,
     "tournamentBattleCount": 389,
-    "currentWinLoseStreak": 2,
+    "currentWinLoseStreak": -1,
     "role": "leader",
     "donations": 0,
     "donationsReceived": 0,
@@ -31,8 +31,12 @@
     },
     "leagueStatistics": {
         "currentSeason": {
-            "trophies": 10014,
+            "trophies": 10000,
             "bestTrophies": 4150
+        },
+        "previousSeason": {
+            "id": "2026-06",
+            "trophies": 4184
         },
         "bestSeason": {
             "id": "2019-11",
@@ -94,7 +98,7 @@
             "name": "CollectionLevel",
             "level": 6,
             "maxLevel": 8,
-            "progress": 1144,
+            "progress": 1195,
             "target": 1200,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/qE8qmfIq6d3V2AmzXMiaffhYjhPdwOWd4OZ1EXK-MPg.png"
@@ -122,12 +126,12 @@
         },
         {
             "name": "MasteryGoblinGang",
-            "level": 6,
+            "level": 7,
             "maxLevel": 10,
-            "progress": 6,
-            "target": 7,
+            "progress": 7,
+            "target": 8,
             "iconUrls": {
-                "large": "https://api-assets.clashroyale.com/playerbadges/512/vvOe1I4thmgAlI5_Ufx8FYjl1xE2n1oGhS1u9CTdCKg.png"
+                "large": "https://api-assets.clashroyale.com/playerbadges/512/w9vZQ2allcaF0vTE8q1XgzSs2KmDIzh11DAAQ4f6Qbo.png"
             }
         },
         {
@@ -142,12 +146,12 @@
         },
         {
             "name": "MasteryGoblinBarrel",
-            "level": 6,
+            "level": 7,
             "maxLevel": 10,
-            "progress": 6,
-            "target": 7,
+            "progress": 7,
+            "target": 8,
             "iconUrls": {
-                "large": "https://api-assets.clashroyale.com/playerbadges/512/XsqY7GVJhKKuFz7AAN8ZMEfMbAfMKKrXrpJfeIPz1RQ.png"
+                "large": "https://api-assets.clashroyale.com/playerbadges/512/BRMX02yNq3fda8rBRORd2zCZRviibw42ofCWqD0URnc.png"
             }
         },
         {
@@ -182,12 +186,12 @@
         },
         {
             "name": "MasteryTornado",
-            "level": 4,
+            "level": 5,
             "maxLevel": 10,
-            "progress": 4,
-            "target": 5,
+            "progress": 5,
+            "target": 6,
             "iconUrls": {
-                "large": "https://api-assets.clashroyale.com/playerbadges/512/-PaL7tPKKp4jXybXK_4iNemSNGiUqR5VzhVLHH2HcKA.png"
+                "large": "https://api-assets.clashroyale.com/playerbadges/512/uOOnHvr8m98Z7QOsyDp-TmHcOJB1aYGT2JbGO5Z_OZg.png"
             }
         },
         {
@@ -911,7 +915,7 @@
             "level": 4,
             "maxLevel": 11,
             "rarity": "epic",
-            "count": 83,
+            "count": 88,
             "elixirCost": 4,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/I1M20_Zs_p_BS1NaNIVQjuMJkYI_1-ePtwYZahn0JXQ.png"
@@ -1170,10 +1174,11 @@
             "name": "Baby Dragon",
             "id": 26000015,
             "level": 5,
+            "evolutionLevel": 1,
             "maxLevel": 11,
             "maxEvolutionLevel": 1,
             "rarity": "epic",
-            "count": 19,
+            "count": 67,
             "elixirCost": 4,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/cjC9n4AvEZJ3urkVh-rwBkJ-aRSsydIMqSAV48hAih0.png",
@@ -2072,22 +2077,22 @@
             "trophies": 0,
             "bestTrophies": 0
         },
-        "TripleDraftTrail": {
+        "AutoChess_2026_Season_10": {
             "arena": {
-                "id": 168000143,
-                "name": "Casual",
-                "rawName": "TripleDraftArena1"
+                "id": 168000162,
+                "name": "Bronze I",
+                "rawName": "AutoChessArena1_2026_Season_10"
             },
             "trophies": 0,
             "bestTrophies": 0
         },
-        "AutoChess_2026_Season_8": {
+        "seasonal-trophy-road-202607": {
             "arena": {
-                "id": 168000133,
-                "name": "Bronze I",
-                "rawName": "AutoChessArena1_2026_Season_8"
+                "id": 168000174,
+                "name": "Seasonal Arena I",
+                "rawName": "SeasonalArenas_202607_Arena1"
             },
-            "trophies": 0,
+            "trophies": 14000,
             "bestTrophies": 0
         }
     },
