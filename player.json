@@ -3,17 +3,17 @@
     "name": "\u00e7h\u00e3\u00f1d\u00e5\u00f1",
     "collectionLevel": 0,
     "expLevel": 52,
-    "trophies": 10000,
-    "bestTrophies": 10014,
-    "wins": 3525,
+    "trophies": 10030,
+    "bestTrophies": 10030,
+    "wins": 3526,
     "losses": 2926,
-    "battleCount": 6451,
+    "battleCount": 6452,
     "threeCrownWins": 1045,
     "challengeCardsWon": 5014,
     "challengeMaxWins": 11,
     "tournamentCardsWon": 213,
     "tournamentBattleCount": 389,
-    "currentWinLoseStreak": -1,
+    "currentWinLoseStreak": 1,
     "role": "leader",
     "donations": 0,
     "donationsReceived": 0,
@@ -32,7 +32,7 @@
     },
     "leagueStatistics": {
         "currentSeason": {
-            "trophies": 10000,
+            "trophies": 10030,
             "bestTrophies": 4150
         },
         "previousSeason": {
@@ -59,7 +59,7 @@
             "name": "BattleWins",
             "level": 6,
             "maxLevel": 8,
-            "progress": 3525,
+            "progress": 3526,
             "target": 5000,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/Hh18NG8LhvwZrcmtGR8rSKRezmhOxCilxqhroDLBnys.png"
@@ -89,7 +89,7 @@
             "name": "BannerCollection",
             "level": 2,
             "maxLevel": 8,
-            "progress": 33,
+            "progress": 35,
             "target": 50,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/8jW2bVK_9lfhrDs2K_LcpYhixWipmy3_BWh7Q_-Fxgo.png"
@@ -233,6 +233,66 @@
             "target": 2,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/x1u3By8TtUDARps9Bp02Az7RTrq7GT1PbmzBjO8HX3o.png"
+            }
+        },
+        {
+            "name": "MasteryIceSpirits",
+            "level": 1,
+            "maxLevel": 10,
+            "progress": 1,
+            "target": 2,
+            "iconUrls": {
+                "large": "https://api-assets.clashroyale.com/playerbadges/512/ycW4RK-k2BFc6roQXf21CTmFunh78gscbberEFXmfcY.png"
+            }
+        },
+        {
+            "name": "MasteryGhost",
+            "level": 1,
+            "maxLevel": 10,
+            "progress": 1,
+            "target": 2,
+            "iconUrls": {
+                "large": "https://api-assets.clashroyale.com/playerbadges/512/PxP0MeXqes5YB5ydmDBq7M_HOGyhL7x82fNwSHpzy6w.png"
+            }
+        },
+        {
+            "name": "MasteryInfernoDragon",
+            "level": 1,
+            "maxLevel": 10,
+            "progress": 1,
+            "target": 2,
+            "iconUrls": {
+                "large": "https://api-assets.clashroyale.com/playerbadges/512/cglgd6xYTGEjDHELr5TABa8uaAE9423Wco4z1XC2tss.png"
+            }
+        },
+        {
+            "name": "MasteryHogRider",
+            "level": 1,
+            "maxLevel": 10,
+            "progress": 1,
+            "target": 2,
+            "iconUrls": {
+                "large": "https://api-assets.clashroyale.com/playerbadges/512/PkoFIEAVw4zlfaP-laLAQtvkmZ-SDO6rzW_-bU_8NjU.png"
+            }
+        },
+        {
+            "name": "MasteryElectroSpirit",
+            "level": 1,
+            "maxLevel": 10,
+            "progress": 1,
+            "target": 2,
+            "iconUrls": {
+                "large": "https://api-assets.clashroyale.com/playerbadges/512/4xsWgZTvq3z4QlKsSJ0vuZojJhp0aZi1oNFE8P37m8U.png"
+            }
+        },
+        {
+            "name": "MasterySnowball",
+            "level": 1,
+            "maxLevel": 10,
+            "progress": 1,
+            "target": 2,
+            "iconUrls": {
+                "large": "https://api-assets.clashroyale.com/playerbadges/512/izPL0G_pfl8SALSFDhX22UGmt9mWvw1NWVAhGW7Evas.png"
             }
         }
     ],
@@ -1910,7 +1970,7 @@
             "level": 2,
             "maxLevel": 11,
             "rarity": "epic",
-            "count": 0,
+            "count": 13,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/cUfU4UowRdbIiRvxv0ns4ezQUNndJTy7D2q4I_K_fzg.png"
             }
@@ -2078,6 +2138,15 @@
             "trophies": 0,
             "bestTrophies": 0
         },
+        "ChaosDraftLeague": {
+            "arena": {
+                "id": 168000176,
+                "name": "Casual",
+                "rawName": "ChaosDraftLeagueArena1"
+            },
+            "trophies": 0,
+            "bestTrophies": 0
+        },
         "AutoChess_2026_Season_10": {
             "arena": {
                 "id": 168000162,
@@ -2085,6 +2154,15 @@
                 "rawName": "AutoChessArena1_2026_Season_10"
             },
             "trophies": 0,
+            "bestTrophies": 0
+        },
+        "seasonal-trophy-road-202608": {
+            "arena": {
+                "id": 168000178,
+                "name": "Seasonal Arena I",
+                "rawName": "SeasonalArenas_202608_Arena1"
+            },
+            "trophies": 14000,
             "bestTrophies": 0
         },
         "seasonal-trophy-road-202607": {
