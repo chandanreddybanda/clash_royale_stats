@@ -35,10 +35,6 @@
             "trophies": 10030,
             "bestTrophies": 4150
         },
-        "previousSeason": {
-            "id": "2026-06",
-            "trophies": 4184
-        },
         "bestSeason": {
             "id": "2019-11",
             "trophies": 4930
@@ -854,12 +850,13 @@
             "id": 26000011,
             "level": 8,
             "maxLevel": 14,
-            "maxEvolutionLevel": 1,
+            "maxEvolutionLevel": 3,
             "rarity": "rare",
             "count": 333,
             "elixirCost": 4,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/0lIoYf3Y_plFTzo95zZL93JVxpfb3MMgFDDhgSDGU9A.png",
+                "heroMedium": "https://api-assets.clashroyale.com/cardheroes/300/0lIoYf3Y_plFTzo95zZL93JVxpfb3MMgFDDhgSDGU9A.png",
                 "evolutionMedium": "https://api-assets.clashroyale.com/cardevolutions/300/0lIoYf3Y_plFTzo95zZL93JVxpfb3MMgFDDhgSDGU9A.png"
             }
         },
@@ -1801,11 +1798,13 @@
             "id": 26000102,
             "level": 1,
             "maxLevel": 16,
+            "maxEvolutionLevel": 2,
             "rarity": "common",
             "count": 728,
             "elixirCost": 2,
             "iconUrls": {
-                "medium": "https://api-assets.clashroyale.com/cards/300/NA6W8S1JBYBlOPwD3dNvJLFvVDKq-UuBs_J3i3ewLFI.png"
+                "medium": "https://api-assets.clashroyale.com/cards/300/NA6W8S1JBYBlOPwD3dNvJLFvVDKq-UuBs_J3i3ewLFI.png",
+                "heroMedium": "https://api-assets.clashroyale.com/cardheroes/300/NA6W8S1JBYBlOPwD3dNvJLFvVDKq-UuBs_J3i3ewLFI.png"
             }
         },
         {
