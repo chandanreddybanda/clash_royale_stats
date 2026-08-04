@@ -1814,7 +1814,7 @@
             "maxLevel": 11,
             "rarity": "epic",
             "count": 92,
-            "elixirCost": 3,
+            "elixirCost": 5,
             "iconUrls": {
                 "medium": "https://api-assets.clashroyale.com/cards/300/BykyeWDqzn4PlHSszu3NbrXT1mHxW2EA8vHbQGR5LDE.png"
             }
