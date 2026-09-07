@@ -689,11 +689,13 @@
             "id": 26000023,
             "level": 2,
             "maxLevel": 8,
+            "maxEvolutionLevel": 2,
             "rarity": "legendary",
             "count": 1,
             "elixirCost": 3,
             "iconUrls": {
-                "medium": "https://api-assets.clashroyale.com/cards/300/W3dkw0HTw9n1jB-zbknY2w3wHuyuLxSRIAV5fUT1SEY.png"
+                "medium": "https://api-assets.clashroyale.com/cards/300/W3dkw0HTw9n1jB-zbknY2w3wHuyuLxSRIAV5fUT1SEY.png",
+                "heroMedium": "https://api-assets.clashroyale.com/cardheroes/300/W3dkw0HTw9n1jB-zbknY2w3wHuyuLxSRIAV5fUT1SEY.png"
             }
         },
         {
