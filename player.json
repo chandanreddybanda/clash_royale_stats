@@ -46,7 +46,7 @@
             "name": "YearsPlayed",
             "level": 10,
             "maxLevel": 11,
-            "progress": 3757,
+            "progress": 3758,
             "target": 4015,
             "iconUrls": {
                 "large": "https://api-assets.clashroyale.com/playerbadges/512/VI28fEl7qdSZ0CZxr6pWT1jCOkkr-OjwEJ30901DKKA.png"
@@ -1306,11 +1306,13 @@
             "id": 26000042,
             "level": 2,
             "maxLevel": 8,
+            "maxEvolutionLevel": 2,
             "rarity": "legendary",
             "count": 2,
             "elixirCost": 4,
             "iconUrls": {
-                "medium": "https://api-assets.clashroyale.com/cards/300/RsFaHgB3w6vXsTjXdPr3x8l_GbV9TbOUCvIx07prbrQ.png"
+                "medium": "https://api-assets.clashroyale.com/cards/300/RsFaHgB3w6vXsTjXdPr3x8l_GbV9TbOUCvIx07prbrQ.png",
+                "heroMedium": "https://api-assets.clashroyale.com/cardheroes/300/RsFaHgB3w6vXsTjXdPr3x8l_GbV9TbOUCvIx07prbrQ.png"
             }
         },
         {
