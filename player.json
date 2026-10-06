@@ -1745,11 +1745,13 @@
             "id": 26000085,
             "level": 4,
             "maxLevel": 11,
+            "maxEvolutionLevel": 1,
             "rarity": "epic",
             "count": 20,
             "elixirCost": 7,
             "iconUrls": {
-                "medium": "https://api-assets.clashroyale.com/cards/300/_uChZkNHAMq6tPb3v6A49xinOe3CnhjstOhG6OZbPYc.png"
+                "medium": "https://api-assets.clashroyale.com/cards/300/_uChZkNHAMq6tPb3v6A49xinOe3CnhjstOhG6OZbPYc.png",
+                "evolutionMedium": "https://api-assets.clashroyale.com/cardevolutions/300/_uChZkNHAMq6tPb3v6A49xinOe3CnhjstOhG6OZbPYc.png"
             }
         },
         {
